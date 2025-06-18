@@ -1,0 +1,18 @@
+list(
+  APPEND
+  _CPP_SOURCE_FILES
+  src/app.cpp
+  src/app.h
+  src/config.cpp
+  src/config.h
+  src/main.cpp
+  src/test.h
+  src/test.cpp
+  src/utils.cpp
+  src/utils.h
+  src/watcher.cpp
+  src/watcher.h)
+
+set(_CPP_SOURCE_FILES
+    ${_CPP_SOURCE_FILES}
+    PARENT_SCOPE)
