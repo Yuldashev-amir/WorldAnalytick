@@ -74,3 +74,4 @@ CMakeLists.txt.user*
 
 CMakeList.txt.user
 build/
+.png .jpg .jpeg
