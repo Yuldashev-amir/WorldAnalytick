@@ -1,4 +1,4 @@
-list(APPEND _QML_SOURCES ui/view/Util.qml)
+list(APPEND _QML_SOURCES ui/view/Util.qml ui/view/InputCrudeOil.qml ui/view/MenuSideBar.qml)
 
 # list(APPEND _QML_SINGLETONS ui/singletons/Fonts.qml
 # ui/singletons/UtilsCPP.qml)

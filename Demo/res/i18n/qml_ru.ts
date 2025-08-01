@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
+    <name>InputCrudeOil</name>
+    <message>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="28"/>
+        <source>Credo Oil global prices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="35"/>
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Main</name>
     <message>
         <location filename="../../Main.qml" line="9"/>
@@ -9,18 +22,31 @@
         <translation>Привет Мир!</translation>
     </message>
     <message>
-        <location filename="../../Main.qml" line="133"/>
         <source>utils</source>
-        <translation>Утилиты</translation>
+        <translation type="vanished">Утилиты</translation>
     </message>
     <message>
-        <location filename="../../Main.qml" line="142"/>
         <source>reset</source>
-        <translation>Сбросить</translation>
+        <translation type="vanished">Сбросить</translation>
     </message>
     <message>
         <source>Translate</source>
         <translation type="vanished">Перевод</translation>
+    </message>
+</context>
+<context>
+    <name>MenuSideBar</name>
+    <message>
+        <location filename="../../ui/view/MenuSideBar.qml" line="37"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="56"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="76"/>
+        <source>Цены на нефть</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/MenuSideBar.qml" line="96"/>
+        <source>Аналитика биржи</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

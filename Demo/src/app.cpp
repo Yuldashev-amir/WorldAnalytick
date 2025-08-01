@@ -4,7 +4,7 @@
 #include "watcher.h"
 #include <qqml.h>
 #include <qqmlintegration.h>
-
+#include "CrudeOil.h"
 App::App(int &argc, char *argv[]) : QGuiApplication(argc, argv) {}
 
 App::~App() {}
@@ -20,7 +20,8 @@ int App::initApp(int argc, char *argv[]) {
       Qt::QueuedConnection);
 
   QString baseModuleName = "Demo";
-
+  CrudeOil * crudeOil = new CrudeOil;
+  qmlRegisterSingletonInstance("CrudeOil", 1, 0, "CrudeOil", crudeOil);
   // Define order of singletons creation
   engine.singletonInstance<Test *>(baseModuleName, "Test");
   engine.singletonInstance<Watcher *>(baseModuleName, "Watcher");

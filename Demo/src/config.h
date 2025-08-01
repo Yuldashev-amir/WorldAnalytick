@@ -8,7 +8,7 @@
 #include <QSettings>
 #include <QStandardPaths>
 #include <qqml.h>
-
+#include <QUrl>
 class Config : public QObject {
   Q_OBJECT
   QML_ELEMENT
@@ -20,14 +20,15 @@ public:
   static Config *instance();
 
   Q_PROPERTY(int baseFontSize READ getBaseFontSize WRITE setBaseFontSize NOTIFY baseFontSizeChanged FINAL)
-
   int getBaseFontSize() const;
   void setBaseFontSize(int newBaseFontSize);
 
-signals:
+  signals:
   void baseFontSizeChanged();
 
-private:
+      void urlOilCrudeDate();
+
+  private:
   static Config *mInstance;
   QSettings *settings;
 

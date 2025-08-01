@@ -17,7 +17,6 @@ Config *Config::instance() { return mInstance; }
 
 int Config::getBaseFontSize() const {
   return settings->value("base_font_size", 10).toInt();
-  ;
 }
 
 void Config::setBaseFontSize(int newBaseFontSize) {
