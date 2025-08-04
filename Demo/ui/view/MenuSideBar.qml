@@ -1,35 +1,47 @@
 import QtQuick
 import QtQuick.Controls
 
-Item {
+Page {
     id: rootSd
     Rectangle {
+        id: rectSideBar
         height: parent.height
-        width: parent.width / 3
+        width: parent.width
         anchors.fill: parent
         anchors.left: parent.left
+        anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        color: "transparent"
-        gradient: Gradient {
-            GradientStop {
-                position: 0.0
-                color: "blue"
-            }
-            GradientStop {
-                position: 0.33
-                color: "lightblue"
-            }
-            GradientStop {
-                position: 1.0
-                color: "blue"
-            }
+        color: "purple"
+        Image {
+            width: parent.width / 3
+            height: parent.height
+            source: "file://home/amir/ProjectsQT/WorldAnalytick/demo/Demo/res/img/backgroundGradient.jpg"
+            anchors.fill: parent
+            fillMode: Image.PreserveAspectCrop
         }
         Column {
             id: sideBar
             anchors.left: parent.left
-            height: parent.height
-            width: parent.width / 3
+            Button {
+                id: burgerMenu
+                width: parent.width
+                height: 50
+                hoverEnabled: true
+                background: Rectangle {
+                    color: "purple"
+                }
+                Text {
+                    text: ">|"
+                    color: burgerMenu.hovered ? "gray" : "black"
+                    font.pixelSize: 40
+                    font.bold: true
+                    anchors.centerIn: parent
+                }
+                onClicked: {
+                    menuVisible = !menuVisible
+                }
+            }
             Button {
                 id: btnFirst
                 Text {
@@ -41,8 +53,7 @@ Item {
                 height: 50
                 hoverEnabled: true
                 background: Rectangle {
-                    color: btnFirst.hovered ? "lightblue" : "blue"
-                    radius: 8
+                    color: btnFirst.hovered ? "lightblue" : "purple"
                 }
                 onClicked: {
                     console.log("Button first clicked")
@@ -61,8 +72,7 @@ Item {
                 hoverEnabled: true
                 anchors.topMargin: 50
                 background: Rectangle {
-                    color: btnSecond.hovered ? "lightblue" : "blue"
-                    radius: 8
+                    color: btnSecond.hovered ? "lightblue" : "purple"
                 }
                 onClicked: {
                     console.log("Button Second clicked")
@@ -81,8 +91,7 @@ Item {
                 anchors.topMargin: 50
                 hoverEnabled: true
                 background: Rectangle {
-                    color: btnThird.hovered ? "lightblue" : "blue"
-                    radius: 8
+                    color: btnThird.hovered ? "lightblue" : "purple"
                 }
                 onClicked: {
                     console.log("Button third clicked")
@@ -100,8 +109,7 @@ Item {
                 height: 40
                 hoverEnabled: true
                 background: Rectangle {
-                    color: btnFour.hovered ? "lightblue" : "blue"
-                    radius: 8
+                    color: btnFour.hovered ? "lightblue" : "purple"
                 }
                 onClicked: {
                     console.log("Button four clicked")

@@ -20,6 +20,11 @@ class CrudeOil : public QObject
     Q_OBJECT
     QML_ELEMENT
     Q_PROPERTY(QUrl urlOilCrudeDate READ urlOilCrudeDate WRITE setUrlOilCrudeDate NOTIFY urlOilCrudeDateChanged)
+    Q_PROPERTY(QString NameProd READ NameProd WRITE setNameProd NOTIFY NameProdChanged FINAL)
+    Q_PROPERTY(QString interval READ interval WRITE setInterval NOTIFY intervalChanged)
+    Q_PROPERTY(QString unit READ unit WRITE setUnit NOTIFY unitChanged)
+    Q_PROPERTY(QStringList date READ date WRITE setDate NOTIFY dateChanged)
+    Q_PROPERTY(QStringList price READ price WRITE setPrice NOTIFY priceChanged)
 public:
     explicit CrudeOil(QObject * parent = nullptr);
     void loadingPriceWithDate();

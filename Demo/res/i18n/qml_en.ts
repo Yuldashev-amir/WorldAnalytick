@@ -9,7 +9,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="35"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="36"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="42"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="48"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
@@ -17,7 +19,7 @@
 <context>
     <name>Main</name>
     <message>
-        <location filename="../../Main.qml" line="9"/>
+        <location filename="../../Main.qml" line="10"/>
         <source>hello_world</source>
         <translation>Hello World!</translation>
     </message>
@@ -37,14 +39,14 @@
 <context>
     <name>MenuSideBar</name>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="37"/>
-        <location filename="../../ui/view/MenuSideBar.qml" line="56"/>
-        <location filename="../../ui/view/MenuSideBar.qml" line="76"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="49"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="67"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="86"/>
         <source>Цены на нефть</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="96"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="105"/>
         <source>Аналитика биржи</source>
         <translation type="unfinished"></translation>
     </message>
