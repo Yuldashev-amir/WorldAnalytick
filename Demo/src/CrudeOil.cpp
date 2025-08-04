@@ -59,3 +59,68 @@ void CrudeOil::setUrlOilCrudeDate(const QUrl &newUrlOilCrudeDate)
     m_urlOilCrudeDate = newUrlOilCrudeDate;
     emit urlOilCrudeDateChanged();
 }
+
+QString CrudeOil::NameProd() const
+{
+    return m_NameProd;
+}
+
+void CrudeOil::setNameProd(const QString &newNameProd)
+{
+    if (m_NameProd == newNameProd)
+        return;
+    m_NameProd = newNameProd;
+    emit NameProdChanged();
+}
+
+QString CrudeOil::interval() const
+{
+    return m_interval;
+}
+
+void CrudeOil::setInterval(const QString &newInterval)
+{
+    if (m_interval == newInterval)
+        return;
+    m_interval = newInterval;
+    emit intervalChanged();
+}
+
+QString CrudeOil::unit() const
+{
+    return m_unit;
+}
+
+void CrudeOil::setUnit(const QString &newUnit)
+{
+    if (m_unit == newUnit)
+        return;
+    m_unit = newUnit;
+    emit unitChanged();
+}
+
+QStringList CrudeOil::date() const
+{
+    return m_date;
+}
+
+void CrudeOil::setDate(const QStringList &newDate)
+{
+    if (m_date == newDate)
+        return;
+    m_date = newDate;
+    emit dateChanged();
+}
+
+QStringList CrudeOil::price() const
+{
+    return m_price;
+}
+
+void CrudeOil::setPrice(const QStringList &newPrice)
+{
+    if (m_price == newPrice)
+        return;
+    m_price = newPrice;
+    emit priceChanged();
+}

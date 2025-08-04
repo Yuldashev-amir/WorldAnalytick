@@ -4,14 +4,17 @@
 <context>
     <name>InputCrudeOil</name>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="28"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="30"/>
         <source>Credo Oil global prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="36"/>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="42"/>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="48"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="38"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="44"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="50"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="56"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="62"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="68"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>

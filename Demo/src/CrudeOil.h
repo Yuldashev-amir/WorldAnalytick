@@ -32,14 +32,44 @@ public:
     QUrl urlOilCrudeDate() const;
     void setUrlOilCrudeDate(const QUrl &newUrlOilCrudeDate);
 
+    QString NameProd() const;
+    void setNameProd(const QString &newNameProd);
+
+    QString interval() const;
+    void setInterval(const QString &newInterval);
+
+    QString unit() const;
+    void setUnit(const QString &newUnit);
+
+    QStringList date() const;
+    void setDate(const QStringList &newDate);
+
+    QStringList price() const;
+    void setPrice(const QStringList &newPrice);
+
 signals:
     void urlOilCrudeDateChanged();
+
+    void NameProdChanged();
+
+    void intervalChanged();
+
+    void unitChanged();
+
+    void dateChanged();
+
+    void priceChanged();
 
 private:
     QNetworkAccessManager network;
     std::unique_ptr<QRestAccessManager> manager;
     std::unique_ptr<QNetworkRequestFactory> api;
     QUrl m_urlOilCrudeDate = QUrl("https://www.alphavantage.co/query?function=WTI&interval=monthly&apikey=demo");
+    QString m_NameProd;
+    QString m_interval;
+    QString m_unit;
+    QStringList m_date;
+    QStringList m_price;
 };
 
 #endif // CRUDEOIL_H
