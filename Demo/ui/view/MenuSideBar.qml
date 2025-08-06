@@ -1,8 +1,11 @@
 import QtQuick
 import QtQuick.Controls
 
+import CrudeOil
+
 Page {
     id: rootSd
+    signal sectionSelected(string sectionName)
     Rectangle {
         id: rectSideBar
         height: parent.height
@@ -32,7 +35,7 @@ Page {
                     color: "purple"
                 }
                 Text {
-                    text: ">|"
+                    text: "✕"
                     color: burgerMenu.hovered ? "gray" : "black"
                     font.pixelSize: 40
                     font.bold: true
@@ -49,6 +52,12 @@ Page {
                     text: qsTr("Цены на нефть")
                     anchors.centerIn: parent
                 }
+                Loader {
+                    id: loadCrudeOil
+                    source: "InputCrudeOil.qml"
+                    active: false
+                }
+
                 width: 120
                 height: 50
                 hoverEnabled: true
@@ -57,6 +66,8 @@ Page {
                 }
                 onClicked: {
                     console.log("Button first clicked")
+                    CrudeOil.loadingPriceCrudeOil()
+                    rootSd.sectionSelected("CrudeOil")
                 }
             }
 

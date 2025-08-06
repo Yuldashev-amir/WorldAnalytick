@@ -9,6 +9,7 @@
 #include <QRestReply>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QJsonArray>
 #include <QDebug>
 #include <memory>
 #include <QPointer>
@@ -25,27 +26,41 @@ class CrudeOil : public QObject
     Q_PROPERTY(QString unit READ unit WRITE setUnit NOTIFY unitChanged)
     Q_PROPERTY(QStringList date READ date WRITE setDate NOTIFY dateChanged)
     Q_PROPERTY(QStringList price READ price WRITE setPrice NOTIFY priceChanged)
+    Q_PROPERTY(QString dateItem READ dateItem WRITE setDateItem NOTIFY dateItemChanged)
+    Q_PROPERTY(QString priceItem READ priceItem WRITE setPriceItem NOTIFY priceItemChanged)
 public:
     explicit CrudeOil(QObject * parent = nullptr);
-    void loadingPriceWithDate();
+    Q_INVOKABLE void loadingPriceCrudeOil();
 
-    QUrl urlOilCrudeDate() const;
+    Q_INVOKABLE QUrl urlOilCrudeDate() const;
     void setUrlOilCrudeDate(const QUrl &newUrlOilCrudeDate);
 
-    QString NameProd() const;
+    Q_INVOKABLE QString NameProd() const;
     void setNameProd(const QString &newNameProd);
 
-    QString interval() const;
+    Q_INVOKABLE QString interval() const;
     void setInterval(const QString &newInterval);
 
-    QString unit() const;
+    Q_INVOKABLE QString unit() const;
     void setUnit(const QString &newUnit);
 
-    QStringList date() const;
+    Q_INVOKABLE QStringList date() const;
     void setDate(const QStringList &newDate);
 
-    QStringList price() const;
+    Q_INVOKABLE QStringList price() const;
     void setPrice(const QStringList &newPrice);
+
+    Q_INVOKABLE int sizeDateElement();
+    Q_INVOKABLE int sizePriceElement();
+
+    void addStringDate(const QString & str);
+    void addStringPrice(const QString & str);
+
+    Q_INVOKABLE QString dateItem() const;
+    void setDateItem(const QString &newDateItem);
+
+    Q_INVOKABLE QString priceItem() const;
+    void setPriceItem(const QString &newPriceItem);
 
 signals:
     void urlOilCrudeDateChanged();
@@ -60,6 +75,10 @@ signals:
 
     void priceChanged();
 
+    void dateItemChanged();
+
+    void priceItemChanged();
+
 private:
     QNetworkAccessManager network;
     std::unique_ptr<QRestAccessManager> manager;
@@ -70,6 +89,8 @@ private:
     QString m_unit;
     QStringList m_date;
     QStringList m_price;
+    QString m_dateItem;
+    QString m_priceItem;
 };
 
 #endif // CRUDEOIL_H

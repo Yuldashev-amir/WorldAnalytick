@@ -4,18 +4,13 @@
 <context>
     <name>InputCrudeOil</name>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="30"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="43"/>
         <source>Credo Oil global prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="38"/>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="44"/>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="50"/>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="56"/>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="62"/>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="68"/>
-        <source></source>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="131"/>
+        <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -38,14 +33,14 @@
 <context>
     <name>MenuSideBar</name>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="49"/>
-        <location filename="../../ui/view/MenuSideBar.qml" line="67"/>
-        <location filename="../../ui/view/MenuSideBar.qml" line="86"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="52"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="78"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="97"/>
         <source>Цены на нефть</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="105"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="116"/>
         <source>Аналитика биржи</source>
         <translation type="unfinished"></translation>
     </message>

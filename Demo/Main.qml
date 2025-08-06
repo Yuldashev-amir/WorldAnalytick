@@ -5,13 +5,17 @@ import QtQuick.Layouts
 import Demo
 
 Window {
-    property bool menuVisible: false
+    id: root
     height: 480
     title: qsTr("hello_world")
     visible: true
     width: 640
     color: "lightblue"
-    InputCrudeOil {}
+    property bool menuVisible: false
+    property string visibleConnection: ""
+    InputCrudeOil {
+        visible: root.visibleConnection === "CrudeOil"
+    }
 
     Button {
         id: burgerMenu
@@ -35,5 +39,9 @@ Window {
     MenuSideBar {
         id: sideBar
         visible: menuVisible
+        onSectionSelected: sectionName => {
+                               visibleConnection = sectionName
+                               console.log(sectionName)
+                           }
     }
 }

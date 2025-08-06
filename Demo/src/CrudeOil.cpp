@@ -6,7 +6,7 @@ CrudeOil::CrudeOil(QObject * parent) : QObject(parent)
     api->setBaseUrl(m_urlOilCrudeDate);
 }
 
-void CrudeOil::loadingPriceWithDate()
+void CrudeOil::loadingPriceCrudeOil()
 {
     QPointer<CrudeOil> guard(this);
     manager->get(api->createRequest(), nullptr, guard, [guard](QRestReply & reply) {
@@ -20,32 +20,45 @@ void CrudeOil::loadingPriceWithDate()
                 if (object.contains("name") && object["name"].isString())
                 {
                     QString nameProd = object["name"].toString();
+                    guard->setNameProd(nameProd);
                 }
                 if (object.contains("interval") && object["interval"].isString())
                 {
                     QString interval = object["interval"].toString();
+                    guard->setInterval(interval);
                 }
                 if (object.contains("unit") && object["unit"].isString())
                 {
                     QString unitProd = object["unit"].toString();
+                    guard->setUnit(unitProd);
                 }
-                for (int index = 0; index < 16; ++index)
-                {
-                    if (object.contains("date") && object["date"].isString() && object.contains("date") && object["date"].isString())
+                    if (object.contains("data") && object["data"].isArray())
                     {
-                        QStringList dateList;
-                        QString date(object["date"].toString());
-                        dateList << date;
-                        QStringList priceList;
-                        QString price(object["value"].toString());
-                        priceList << price;
-
+                        QJsonArray jsonArray = object["data"].toArray();
+                        if(jsonArray.isEmpty())
+                            qWarning() << "Empty Array Error parse json";
+                        QJsonObject objectJson;
+                        for (int index = 0; index <= jsonArray.size(); ++index)
+                        {
+                            QStringList dateList;
+                            QStringList priceList;
+                            objectJson = jsonArray[index].toObject();
+                            qDebug() << "Json " << objectJson;
+                            if (objectJson.contains("date") && objectJson["date"].isString() && objectJson.contains("value") && objectJson["value"].isString())
+                            {
+                                dateList << (objectJson["date"].toString());
+                                qWarning() << "Date: " << dateList;
+                                guard->setDate(dateList);
+                                priceList << objectJson["value"].toString();
+                                qWarning() << "Value price: " << priceList;
+                                guard->setPrice(priceList);
+                            }
+                        }
                     }
                 }
             }
-        }
-    });
-}
+        });
+    }
 
 QUrl CrudeOil::urlOilCrudeDate() const
 {
@@ -123,4 +136,52 @@ void CrudeOil::setPrice(const QStringList &newPrice)
         return;
     m_price = newPrice;
     emit priceChanged();
+}
+
+int CrudeOil::sizeDateElement()
+{
+    return m_date.size();
+}
+
+int CrudeOil::sizePriceElement()
+{
+    return m_price.size();
+}
+
+void CrudeOil::addStringDate(const QString & str)
+{
+    m_date.append(str);
+    emit dateChanged();
+}
+
+void CrudeOil::addStringPrice(const QString & str)
+{
+    m_price.append(str);
+    emit priceChanged();
+}
+
+QString CrudeOil::dateItem() const
+{
+    return m_dateItem;
+}
+
+void CrudeOil::setDateItem(const QString &newDateItem)
+{
+    if (m_dateItem == newDateItem)
+        return;
+    m_dateItem = newDateItem;
+    emit dateItemChanged();
+}
+
+QString CrudeOil::priceItem() const
+{
+    return m_priceItem;
+}
+
+void CrudeOil::setPriceItem(const QString &newPriceItem)
+{
+    if (m_priceItem == newPriceItem)
+        return;
+    m_priceItem = newPriceItem;
+    emit priceItemChanged();
 }
