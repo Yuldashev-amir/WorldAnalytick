@@ -13,7 +13,9 @@ list(
   src/watcher.cpp
   src/watcher.h
   src/CrudeOil.cpp
-  src/CrudeOil.h)
+  src/CrudeOil.h
+  src/TskoLlp.cpp
+  src/TskoLlp.h)
 
 set(_CPP_SOURCE_FILES
     ${_CPP_SOURCE_FILES}

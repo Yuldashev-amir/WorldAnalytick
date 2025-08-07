@@ -62,6 +62,9 @@ public:
     Q_INVOKABLE QString priceItem() const;
     void setPriceItem(const QString &newPriceItem);
 
+    QUrl urlTskoLlp() const;
+    void setUrlTskoLlp(const QUrl &newUrlTskoLlp);
+
 signals:
     void urlOilCrudeDateChanged();
 
@@ -78,6 +81,8 @@ signals:
     void dateItemChanged();
 
     void priceItemChanged();
+
+    void urlTskoLlpChanged();
 
 private:
     QNetworkAccessManager network;

@@ -38,20 +38,25 @@ void CrudeOil::loadingPriceCrudeOil()
                         if(jsonArray.isEmpty())
                             qWarning() << "Empty Array Error parse json";
                         QJsonObject objectJson;
-                        for (int index = 0; index <= jsonArray.size(); ++index)
+                        QStringList dateList;
+                        QStringList priceList;
+                        for (int index = 0; index <= 8; ++index)
                         {
-                            QStringList dateList;
-                            QStringList priceList;
                             objectJson = jsonArray[index].toObject();
                             qDebug() << "Json " << objectJson;
                             if (objectJson.contains("date") && objectJson["date"].isString() && objectJson.contains("value") && objectJson["value"].isString())
                             {
-                                dateList << (objectJson["date"].toString());
-                                qWarning() << "Date: " << dateList;
-                                guard->setDate(dateList);
-                                priceList << objectJson["value"].toString();
-                                qWarning() << "Value price: " << priceList;
-                                guard->setPrice(priceList);
+                                if (dateList.isEmpty() && priceList.isEmpty())
+                                {
+                                    dateList << objectJson["date"].toString();
+                                    priceList << objectJson["value"].toString();
+                                }
+                                    dateList.insert(index, objectJson["date"].toString());
+                                    qWarning() << "Date: " << dateList[index];
+                                    guard->setDate(dateList);
+                                    priceList.insert(index, objectJson["value"].toString());
+                                    qWarning() << "Value price: " << priceList[index];
+                                    guard->setPrice(priceList);
                             }
                         }
                     }

@@ -5,6 +5,7 @@
 #include <qqml.h>
 #include <qqmlintegration.h>
 #include "CrudeOil.h"
+#include "TskoLlp.h"
 App::App(int &argc, char *argv[]) : QGuiApplication(argc, argv) {}
 
 App::~App() {}
@@ -21,7 +22,9 @@ int App::initApp(int argc, char *argv[]) {
 
   QString baseModuleName = "Demo";
   CrudeOil * crudeOil = new CrudeOil;
+  TskoLlp * tsko = new TskoLlp;
   qmlRegisterSingletonInstance("CrudeOil", 1, 0, "CrudeOil", crudeOil);
+  qmlRegisterSingletonInstance("TskoLlp", 1, 0, "TskoLlp", tsko);
   // Define order of singletons creation
   engine.singletonInstance<Test *>(baseModuleName, "Test");
   engine.singletonInstance<Watcher *>(baseModuleName, "Watcher");

@@ -10,11 +10,42 @@ Window {
     title: qsTr("hello_world")
     visible: true
     width: 640
-    color: "lightblue"
+    color: "transparent"
+    Rectangle {
+        width: parent.width
+        height: parent.height
+        anchors.fill: parent
+        gradient: Gradient {
+            orientation: Qt.Horizontal
+            GradientStop {
+                position: 0.0
+                color: "white"
+            }
+            GradientStop {
+                position: 0.23
+                color: "blue"
+            }
+            GradientStop {
+                position: 1.0
+                color: "lightblue"
+            }
+        }
+    }
+
     property bool menuVisible: false
     property string visibleConnection: ""
+    property string visibleActionPrice: ""
+    property string visibleShopTrt: ""
     InputCrudeOil {
         visible: root.visibleConnection === "CrudeOil"
+    }
+
+    TskoLLP {
+        visible: root.visibleActionPrice === "TskoLlp"
+    }
+
+    ShopTRT {
+        visible: root.visibleShopTrt === "ShopTRT"
     }
 
     Button {
@@ -38,10 +69,19 @@ Window {
     }
     MenuSideBar {
         id: sideBar
+        z: 2
         visible: menuVisible
         onSectionSelected: sectionName => {
                                visibleConnection = sectionName
                                console.log(sectionName)
                            }
+        onSectionTskoLlp: sectionName => {
+                              visibleActionPrice = sectionName
+                              console.log(sectionName)
+                          }
+        onSectionShopTrt: sectionName => {
+                              visibleShopTrt = sectionName
+                              console.log(sectionName)
+                          }
     }
 }

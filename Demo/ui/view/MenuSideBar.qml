@@ -2,10 +2,15 @@ import QtQuick
 import QtQuick.Controls
 
 import CrudeOil
+import TskoLlp
 
 Page {
     id: rootSd
+    property bool onClicked: false
     signal sectionSelected(string sectionName)
+    signal sectionTskoLlp(string sectionName)
+    signal sectionShopTrt(string sectionName)
+    z: 2
     Rectangle {
         id: rectSideBar
         height: parent.height
@@ -52,12 +57,6 @@ Page {
                     text: qsTr("Цены на нефть")
                     anchors.centerIn: parent
                 }
-                Loader {
-                    id: loadCrudeOil
-                    source: "InputCrudeOil.qml"
-                    active: false
-                }
-
                 width: 120
                 height: 50
                 hoverEnabled: true
@@ -65,9 +64,14 @@ Page {
                     color: btnFirst.hovered ? "lightblue" : "purple"
                 }
                 onClicked: {
+                    if (rootSd.onClicked === true) {
+                        rootSd.onClicked = false
+                        rootSd.sectionSelected("new")
+                    }
                     console.log("Button first clicked")
                     CrudeOil.loadingPriceCrudeOil()
                     rootSd.sectionSelected("CrudeOil")
+                    rootSd.onClicked = true
                 }
             }
 
@@ -75,7 +79,7 @@ Page {
                 id: btnSecond
                 Text {
                     id: textSecondBtn
-                    text: qsTr("Цены на нефть")
+                    text: qsTr("Акции TSKO LLP")
                     anchors.centerIn: parent
                 }
                 width: 120
@@ -86,7 +90,15 @@ Page {
                     color: btnSecond.hovered ? "lightblue" : "purple"
                 }
                 onClicked: {
-                    console.log("Button Second clicked")
+                    if (rootSd.onClicked === true) {
+                        rootSd.onClicked = false
+                        rootSd.sectionTskoLlp("new")
+                        console.log("Button Second clicked")
+                    }
+                    rootSd.sectionTskoLlp("TskoLlp")
+                    console.log("Button clicked")
+                    TskoLlp.loadingTskoLlp()
+                    rootSd.onClicked = true
                 }
             }
 
@@ -94,7 +106,7 @@ Page {
                 id: btnThird
                 Text {
                     id: textThirdBtn
-                    text: qsTr("Цены на нефть")
+                    text: qsTr("Акции SHOP TRT")
                     anchors.centerIn: parent
                 }
                 width: 120
@@ -105,7 +117,14 @@ Page {
                     color: btnThird.hovered ? "lightblue" : "purple"
                 }
                 onClicked: {
-                    console.log("Button third clicked")
+                    if (rootSd.onClicked === true) {
+                        rootSd.onClicked = false
+                        rootSd.sectionShopTrt("new")
+                        console.log("Button third clicked")
+                    }
+                    console.log("Button clicked")
+                    rootSd.sectionShopTrt("ShopTRT")
+                    rootSd.onClicked = true
                 }
             }
 

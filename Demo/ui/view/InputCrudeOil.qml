@@ -7,12 +7,9 @@ Page {
     id: root
     width: parent.width
     height: parent.height
-    property string dateProduct: CrudeOil.date[0]
-    property string actuallPrice: CrudeOil.price[0]
     anchors.right: parent.right
     anchors.top: parent.top
     anchors.bottom: parent.bottom
-    visible: visibleConnection === "CrudeOil"
     Rectangle {
         id: sideBar
         width: parent.width
@@ -24,7 +21,7 @@ Page {
         Image {
             width: parent.width / 2
             height: parent.height
-            source: "file://home/amir/ProjectsQT/WorldAnalytick/demo/Demo/res/img/background1.jpg"
+            source: "file:///home/amir/ProjectsQT/WorldAnalytick/demo/Demo/res/img/backgroundGradient.jpg"
             fillMode: Image.PreserveAspectCrop
             anchors.fill: parent
         }
@@ -89,7 +86,7 @@ Page {
             }
             Text {
                 id: prices2
-                text: qsTr("Date: " + CrudeOil.date)
+                text: qsTr("Date: " + CrudeOil.date[1])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
@@ -97,7 +94,7 @@ Page {
             }
             Text {
                 id: dateCrudeOil2
-                text: qsTr("Price: " + CrudeOil.price)
+                text: qsTr("Price: " + CrudeOil.price[1])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
@@ -105,7 +102,7 @@ Page {
             }
             Text {
                 id: prices3
-                text: qsTr("Date: " + CrudeOil.date)
+                text: qsTr("Date: " + CrudeOil.date[2])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
@@ -113,11 +110,27 @@ Page {
             }
             Text {
                 id: dateCrudeOil3
-                text: qsTr("Price: " + CrudeOil.price)
+                text: qsTr("Price: " + CrudeOil.price[2])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 275
+            }
+            Text {
+                id: prices4
+                text: qsTr("Date: " + CrudeOil.date[3])
+                font.pixelSize: 18
+                color: "white"
+                wrapMode: Text.Wrap
+                topPadding: 310
+            }
+            Text {
+                id: dateCrudeOil4
+                text: qsTr("Price: " + CrudeOil.price[3])
+                font.pixelSize: 18
+                color: "white"
+                wrapMode: Text.Wrap
+                topPadding: 330
             }
             Button {
                 id: buttonClear
