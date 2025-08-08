@@ -3,6 +3,8 @@ import QtQuick.Controls
 
 import CrudeOil
 import TskoLlp
+import BrentCrudeOil
+import NaturelGas
 
 Page {
     id: rootSd
@@ -10,7 +12,9 @@ Page {
     signal sectionSelected(string sectionName)
     signal sectionTskoLlp(string sectionName)
     signal sectionShopTrt(string sectionName)
-    z: 2
+    signal sectionBrentCrudeOil(string sectionName)
+    signal sectionNatureGas(string sectionName)
+    z: 1
     Rectangle {
         id: rectSideBar
         height: parent.height
@@ -132,7 +136,7 @@ Page {
                 id: btnFour
                 Text {
                     id: textFourBtn
-                    text: qsTr("Аналитика биржи")
+                    text: qsTr("Brent CrudeOil Lots")
                     anchors.centerIn: parent
                 }
                 width: 120
@@ -143,6 +147,28 @@ Page {
                 }
                 onClicked: {
                     console.log("Button four clicked")
+                    rootSd.sectionBrentCrudeOil("BrentCrudeOil")
+                    BrentCrudeOil.loadingBrentData()
+                }
+            }
+
+            Button {
+                id: btnFive
+                Text {
+                    id: textFiveBtn
+                    text: qsTr("Naturel Gas Lots")
+                    anchors.centerIn: parent
+                }
+                width: 120
+                height: 40
+                hoverEnabled: true
+                background: Rectangle {
+                    color: btnFive.hovered ? "lightblue" : "purple"
+                }
+                onClicked: {
+                    console.log("Button five clicked")
+                    rootSd.sectionNatureGas("NaturalGase")
+                    NaturelGas.loadingPriceNatGas()
                 }
             }
         }

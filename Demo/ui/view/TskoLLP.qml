@@ -46,23 +46,23 @@ Page {
             }
             Text {
                 id: symbolInput
-                text: qsTr(TskoLlp.symbol)
+                text: qsTr("Symbol: " + TskoLlp.symbol)
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                anchors.topMargin: 55
+                anchors.topMargin: 60
                 wrapMode: Text.Wrap
             }
             Text {
                 id: dateRefr
-                text: qsTr(TskoLlp.dateRefreshed)
+                text: qsTr("Date refreshed: " + TskoLlp.dateRefreshed)
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                anchors.topMargin: 95
+                anchors.topMargin: 90
                 wrapMode: Text.Wrap
             }
             Text {
                 id: outSize
-                text: qsTr(TskoLlp.outSize)
+                text: qsTr("Output size " + TskoLlp.outSize)
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
                 anchors.topMargin: 115
@@ -70,8 +70,7 @@ Page {
             }
             Text {
                 id: zone
-                text: qsTr(TskoLlp.zone)
-                anchors.centerIn: parent
+                text: qsTr("Tize zone " + TskoLlp.zone)
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
                 anchors.topMargin: 145
@@ -79,26 +78,23 @@ Page {
             }
             Text {
                 id: dateChanged
-                text: qsTr(TskoLlp.date)
-                anchors.centerIn: parent
+                text: qsTr("Time series" + TskoLlp.date)
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                anchors.topMargin: 165
+                anchors.topMargin: 175
                 wrapMode: Text.Wrap
             }
             Text {
                 id: open
-                text: qsTr(TskoLlp.open[0])
-                anchors.centerIn: parent
+                text: qsTr("Open: " + TskoLlp.open[0])
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                anchors.topMargin: 195
+                anchors.topMargin: 200
                 wrapMode: Text.Wrap
             }
             Text {
                 id: high
-                text: qsTr(TskoLlp.high[0])
-                anchors.centerIn: parent
+                text: qsTr("High: " + TskoLlp.high[0])
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
                 anchors.topMargin: 225
@@ -106,29 +102,26 @@ Page {
             }
             Text {
                 id: low
-                text: qsTr(TskoLlp.low[0])
-                anchors.centerIn: parent
+                text: qsTr("Low: " + TskoLlp.low[0])
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                anchors.topMargin: 255
+                anchors.topMargin: 250
                 wrapMode: Text.Wrap
             }
             Text {
                 id: close
-                text: qsTr(TskoLlp.close[0])
-                anchors.centerIn: parent
+                text: qsTr("Close: " + TskoLlp.close[0])
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                anchors.topMargin: 285
+                anchors.topMargin: 275
                 wrapMode: Text.Wrap
             }
             Text {
                 id: volume
-                text: qsTr(TskoLlp.volume[0])
-                anchors.centerIn: parent
+                text: qsTr("Volume: " + TskoLlp.volume[0])
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                anchors.topMargin: 310
+                anchors.topMargin: 300
                 wrapMode: Text.Wrap
             }
         }

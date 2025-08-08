@@ -2,14 +2,27 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="en_US">
 <context>
-    <name>InputCrudeOil</name>
+    <name>BrentCrude</name>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="40"/>
+        <location filename="../../ui/view/BrentCrude.qml" line="41"/>
         <source>Credo Oil global prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="144"/>
+        <location filename="../../ui/view/BrentCrude.qml" line="228"/>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InputCrudeOil</name>
+    <message>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="41"/>
+        <source>Credo Oil global prices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="228"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17,9 +30,8 @@
 <context>
     <name>Main</name>
     <message>
-        <location filename="../../Main.qml" line="10"/>
         <source>hello_world</source>
-        <translation>Hello World!</translation>
+        <translation type="vanished">Hello World!</translation>
     </message>
     <message>
         <source>utils</source>
@@ -33,27 +45,50 @@
         <source>Translate</source>
         <translation type="vanished">Translate</translation>
     </message>
+    <message>
+        <location filename="../../Main.qml" line="10"/>
+        <source>Analyticks</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MenuSideBar</name>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="57"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="61"/>
         <source>Цены на нефть</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="82"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="86"/>
         <source>Акции TSKO LLP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="109"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="113"/>
         <source>Акции SHOP TRT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="135"/>
-        <source>Аналитика биржи</source>
+        <location filename="../../ui/view/MenuSideBar.qml" line="139"/>
+        <source>Brent CrudeOil Lots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/MenuSideBar.qml" line="159"/>
+        <source>Naturel Gas Lots</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>NaturelGasLot</name>
+    <message>
+        <location filename="../../ui/view/NaturelGasLot.qml" line="41"/>
+        <source>Naturel Gas prices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/NaturelGasLot.qml" line="228"/>
+        <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -92,7 +127,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/TskoLLP.qml" line="145"/>
+        <location filename="../../ui/view/TskoLLP.qml" line="138"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>

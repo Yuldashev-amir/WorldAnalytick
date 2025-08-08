@@ -7,7 +7,7 @@ import Demo
 Window {
     id: root
     height: 480
-    title: qsTr("hello_world")
+    title: qsTr("Analyticks")
     visible: true
     width: 640
     color: "transparent"
@@ -23,31 +23,35 @@ Window {
             }
             GradientStop {
                 position: 0.23
-                color: "blue"
+                color: "black"
             }
             GradientStop {
                 position: 1.0
-                color: "lightblue"
+                color: Qt.darker("white")
             }
         }
     }
-
     property bool menuVisible: false
     property string visibleConnection: ""
     property string visibleActionPrice: ""
     property string visibleShopTrt: ""
+    property string visibleBrentCrudeOil: ""
+    property string visibleNaturalGase: ""
     InputCrudeOil {
         visible: root.visibleConnection === "CrudeOil"
     }
-
     TskoLLP {
         visible: root.visibleActionPrice === "TskoLlp"
     }
-
     ShopTRT {
         visible: root.visibleShopTrt === "ShopTRT"
     }
-
+    BrentCrude {
+        visible: root.visibleBrentCrudeOil === "BrentCrudeOil"
+    }
+    NaturelGasLot {
+        visible: root.visibleNaturalGase === "NaturalGase"
+    }
     Button {
         id: burgerMenu
         width: 50
@@ -83,5 +87,13 @@ Window {
                               visibleShopTrt = sectionName
                               console.log(sectionName)
                           }
+        onSectionBrentCrudeOil: sectionName => {
+                                    visibleBrentCrudeOil = sectionName
+                                    console.log(sectionName)
+                                }
+        onSectionNatureGas: sectionName => {
+                                visibleNaturalGase = sectionName
+                                console.log(sectionName)
+                            }
     }
 }

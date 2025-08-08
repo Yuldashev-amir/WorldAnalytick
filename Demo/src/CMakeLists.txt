@@ -15,7 +15,11 @@ list(
   src/CrudeOil.cpp
   src/CrudeOil.h
   src/TskoLlp.cpp
-  src/TskoLlp.h)
+  src/TskoLlp.h
+  src/BrentCrudeOil.cpp
+  src/BrentCrudeOil.h
+  src/NaturelGas.cpp
+  src/NaturelGas.h)
 
 set(_CPP_SOURCE_FILES
     ${_CPP_SOURCE_FILES}

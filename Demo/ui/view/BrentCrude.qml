@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 
-import CrudeOil
+import BrentCrudeOil
 
 Page {
     id: root
@@ -10,7 +10,7 @@ Page {
     anchors.right: parent.right
     anchors.top: parent.top
     anchors.bottom: parent.bottom
-
+    visible: true
     Rectangle {
         id: sideBar
         width: parent.width
@@ -22,7 +22,7 @@ Page {
         Image {
             width: parent.width
             height: parent.height
-            source: "file:///home/amir/ProjectsQT/WorldAnalytick/demo/Demo/res/img/backgroundGradient.jpg"
+            source: "file:///home/amir/ProjectsQT/WorldAnalytick/demo/Demo/res/img/transparent-oily-bubbles-vibrant-copy-space-watery-background.jpg"
             fillMode: Image.PreserveAspectCrop
             anchors.fill: parent
         }
@@ -47,7 +47,7 @@ Page {
             }
             Text {
                 id: nameProd
-                text: qsTr(CrudeOil.NameProd)
+                text: qsTr(BrentCrudeOil.NameProd)
                 font.pixelSize: 18
                 color: "white"
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -56,7 +56,7 @@ Page {
             }
             Text {
                 id: interval
-                text: qsTr(CrudeOil.interval)
+                text: qsTr(BrentCrudeOil.interval)
                 font.pixelSize: 18
                 color: "white"
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -65,7 +65,7 @@ Page {
             }
             Text {
                 id: dateProd
-                text: qsTr(CrudeOil.unit)
+                text: qsTr(BrentCrudeOil.unit)
                 font.pixelSize: 18
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: "white"
@@ -74,146 +74,146 @@ Page {
             }
             Text {
                 id: prices1
-                text: qsTr("Period: " + CrudeOil.date[0])
+                text: qsTr("Period: " + BrentCrudeOil.date[0])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
+                anchors.left: parent.left
                 topPadding: 120
             }
             Text {
                 id: dateCrudeOil1
-                text: qsTr("Price: " + CrudeOil.price[0] + "$")
+                text: qsTr("Price: " + BrentCrudeOil.price[0] + "$")
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
+                anchors.left: parent.left
                 topPadding: 140
             }
             Text {
                 id: prices2
-                text: qsTr("Period: " + CrudeOil.date[1])
+                text: qsTr("Period: " + BrentCrudeOil.date[1])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
+                anchors.left: parent.left
                 topPadding: 185
             }
             Text {
                 id: dateCrudeOil2
-                text: qsTr("Price: " + CrudeOil.price[1] + "$")
+                text: qsTr("Price: " + BrentCrudeOil.price[1] + "$")
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
+                anchors.left: parent.left
                 topPadding: 210
             }
             Text {
                 id: prices3
-                text: qsTr("Period: " + CrudeOil.date[2])
+                text: qsTr("Period: " + BrentCrudeOil.date[2])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
+                anchors.left: parent.left
                 topPadding: 250
             }
             Text {
                 id: dateCrudeOil3
-                text: qsTr("Price: " + CrudeOil.price[2] + "$")
+                text: qsTr("Price: " + BrentCrudeOil.price[2] + "$")
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
+                anchors.left: parent.left
                 topPadding: 275
             }
             Text {
                 id: prices4
-                text: qsTr("Period: " + CrudeOil.date[3])
+                text: qsTr("Period: " + BrentCrudeOil.date[3])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
+                anchors.left: parent.left
                 topPadding: 310
             }
             Text {
                 id: dateCrudeOil4
-                text: qsTr("Price: " + CrudeOil.price[3] + "$")
+                text: qsTr("Price: " + BrentCrudeOil.price[3] + "$")
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
+                anchors.left: parent.left
                 topPadding: 330
             }
             Text {
                 id: prices5
-                text: qsTr("Period: " + CrudeOil.date[4])
+                text: qsTr("Period: " + BrentCrudeOil.date[4])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
-                anchors.bottomMargin: 30
                 topPadding: 120
             }
             Text {
                 id: dateCrudeOil5
-                text: qsTr("Price: " + CrudeOil.price[4] + "$")
+                text: qsTr("Price: " + BrentCrudeOil.price[4] + "$")
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
-                anchors.bottomMargin: 30
                 topPadding: 140
             }
             Text {
                 id: prices6
-                text: qsTr("Period: " + CrudeOil.date[5])
+                text: qsTr("Period: " + BrentCrudeOil.date[5])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
-                anchors.bottomMargin: 50
                 topPadding: 185
             }
             Text {
                 id: dateCrudeOil6
-                text: qsTr("Price: " + CrudeOil.price[5] + "$")
+                text: qsTr("Price: " + BrentCrudeOil.price[5] + "$")
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
-                anchors.bottomMargin: 50
                 topPadding: 210
             }
             Text {
                 id: prices7
-                text: qsTr("Period: " + CrudeOil.date[6])
+                text: qsTr("Period: " + BrentCrudeOil.date[6])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
-                anchors.bottomMargin: 50
                 topPadding: 250
             }
             Text {
                 id: dateCrudeOil7
-                text: qsTr("Price: " + CrudeOil.price[6] + "$")
+                text: qsTr("Price: " + BrentCrudeOil.price[6] + "$")
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
-                anchors.bottomMargin: 50
                 topPadding: 275
             }
             Text {
                 id: prices8
-                text: qsTr("Period: " + CrudeOil.date[7])
+                text: qsTr("Period: " + BrentCrudeOil.date[7])
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
-                anchors.bottomMargin: 50
                 topPadding: 310
             }
             Text {
                 id: dateCrudeOil8
-                text: qsTr("Price: " + CrudeOil.price[7] + "$")
+                text: qsTr("Price: " + BrentCrudeOil.price[7] + "$")
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
-                anchors.bottomMargin: 50
                 topPadding: 330
             }
             Button {
@@ -236,7 +236,7 @@ Page {
                 }
 
                 onClicked: {
-                    visibleConnection = "new"
+                    visibleBrentCrudeOil = "new"
                 }
             }
         }

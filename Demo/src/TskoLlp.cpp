@@ -13,66 +13,90 @@ void TskoLlp::loadingTskoLlp()
     manager->get(api->createRequest(), nullptr, guard, [guard](QRestReply & reply) {
         if (reply.isSuccess())
         {
+            qWarning() << "Json is parsed";
             if (std::optional<QJsonDocument> json = reply.readJson())
             {
                 QJsonObject object = json->object();
                 if (object.isEmpty())
                     qWarning() << "Json empty";
-                if (object.contains("1. Information") && object["1. Information"].isString())
+                QJsonObject metaObject;
+                if (object.contains("Meta Data") && object["Meta Data"].isObject())
                 {
-                    QString information = object["1. Information"].toString();
-                    guard->setInfo(information);
-                    qWarning() << information;
-                }
-                if (object.contains("2. Symbol") && object["2. Symbol"].isString())
-                {
-                    QString symb = object["2. Symbol"].toString();
-                    guard->setSymbol(symb);
-                    qWarning() << symb;
-                }
-                if (object.contains("3. Last Refreshed") && object["3. Last Refreshed"].isString())
-                {
-                    QString dateRef = object["3. Last Refreshed"].toString();
-                    guard->setDateRefreshed(dateRef);
-                    qWarning() << dateRef;
-                }
-                if (object.contains("4. Output Size") && object["4. Output Size"].isString())
-                {
-                    QString outSize = object["4. Output Size"].toString();
-                    guard->setOutSize(outSize);
-                    qWarning() << outSize;
-                }
-                if (object.contains("5. Time Zone") && object["5. Time Zone"].isString())
-                {
-                    QString timeZone = object["5. Time Zone"].toString();
-                    guard->setZone(timeZone);
-                    qDebug() << timeZone;
-                }
-                if (object.contains("Time Series (Daily)") && object["Time Series (Daily)"].isString())
-                {
-                    QString timeSeries = object["Time Series (Daily)"].toString();
-                    QStringList openListValue;
-                    QStringList highListValue;
-                    QStringList lowListValue;
-                    QStringList closeListValue;
-                    QStringList volumeListValue;
-                    for (int index = 0; index < 10; ++index)
+                    metaObject = object["Meta Data"].toObject();
+                    if (metaObject.contains("1. Information") && metaObject["1. Information"].isString())
                     {
-                        openListValue.insert(index, object["open"].toString());
-                        highListValue.insert(index, object["high"].toString());
-                        lowListValue.insert(index, object["low"].toString());
-                        closeListValue.insert(index, object["close"].toString());
-                        volumeListValue.insert(index, object["volume"].toString());
-                        qWarning() << "Open List " << openListValue;
-                        qWarning() << "High List " << highListValue;
-                        qWarning() << "Low list " << lowListValue;
-                        qWarning() << "Close List " << closeListValue;
-                        qWarning() << "Volume List " << volumeListValue;
-                        guard->setOpen(openListValue);
-                        guard->setHigh(highListValue);
-                        guard->setlow(lowListValue);
-                        guard->setClose(closeListValue);
-                        guard->setVolume(volumeListValue);
+                        QString information = metaObject["1. Information"].toString();
+                        guard->setInfo(information);
+                        qWarning() << information;
+                    }
+                    if (metaObject.contains("2. Symbol") && metaObject["2. Symbol"].isString())
+                    {
+                        QString symb = metaObject["2. Symbol"].toString();
+                        guard->setSymbol(symb);
+                        qWarning() << symb;
+                    }
+                    if (metaObject.contains("3. Last Refreshed") && metaObject["3. Last Refreshed"].isString())
+                    {
+                        QString dateRef = metaObject["3. Last Refreshed"].toString();
+                        guard->setDateRefreshed(dateRef);
+                        qWarning() << dateRef;
+                    }
+                    if (metaObject.contains("4. Output Size") && metaObject["4. Output Size"].isString())
+                    {
+                        QString outSize = metaObject["4. Output Size"].toString();
+                        guard->setOutSize(outSize);
+                        qWarning() << outSize;
+                    }
+                    if (metaObject.contains("5. Time Zone") && metaObject["5. Time Zone"].isString())
+                    {
+                        QString timeZone = metaObject["5. Time Zone"].toString();
+                        guard->setZone(timeZone);
+                        qDebug() << timeZone;
+                    }
+                }
+                QJsonObject dateObject;
+                if (object.contains("Time Series (Daily)") && object["Time Series (Daily)"].isObject())
+                {
+                    dateObject = object["Time Series (Daily)"].toObject();
+                    if (dateObject.contains("2025-08-07") && dateObject["2025-08-07"].isObject())
+                    {
+                        qWarning() << "Date object" << dateObject["2025-08-07"].toObject();
+                        QJsonObject time = dateObject["2025-08-07"].toObject();
+                        QStringList openListValue;
+                        QStringList highListValue;
+                        QStringList lowListValue;
+                        QStringList closeListValue;
+                        QStringList volumeListValue;
+                        if (time.contains("1. open") && time["1. open"].isString())
+                        {
+                            qWarning() << time["1. open"].toString();
+                            openListValue << time["1. open"].toString();
+                            guard->setOpen(openListValue);
+                        }
+                        if (time.contains("2. high") && time["2. high"].isString())
+                        {
+                            qWarning() << time["2. high"].toString();
+                            highListValue << time["2. high"].toString();
+                            guard->setHigh(highListValue);
+                        }
+                        if (time.contains("3. low") && time["3. low"].isString())
+                        {
+                            qWarning() << "Low list " << lowListValue;
+                            lowListValue << time["3. low"].toString();
+                            guard->setlow(lowListValue);
+                        }
+                        if (time.contains("4. close") && time["4. close"].isString())
+                        {
+                            qWarning() << "Close List " << closeListValue;
+                            closeListValue << time["4. close"].toString();
+                            guard->setClose(closeListValue);
+                        }
+                        if (time.contains("5. volume") && time["5. volume"].isString())
+                        {
+                            qWarning() << "Volume List " << volumeListValue;
+                            volumeListValue << time["5. volume"].toString();
+                            guard->setVolume(volumeListValue);
+                        }
                     }
                 }
             }

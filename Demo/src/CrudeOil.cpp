@@ -12,6 +12,7 @@ void CrudeOil::loadingPriceCrudeOil()
     manager->get(api->createRequest(), nullptr, guard, [guard](QRestReply & reply) {
         if (reply.isSuccess())
         {
+            qWarning() << "Json is parsed";
             if (std::optional<QJsonDocument> json = reply.readJson())
             {
                 QJsonObject object = json->object();
@@ -63,7 +64,7 @@ void CrudeOil::loadingPriceCrudeOil()
                 }
             }
         });
-    }
+}
 
 QUrl CrudeOil::urlOilCrudeDate() const
 {
