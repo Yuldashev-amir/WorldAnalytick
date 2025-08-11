@@ -58,7 +58,7 @@ Page {
                 id: btnFirst
                 Text {
                     id: textFirstBtn
-                    text: qsTr("Цены на нефть")
+                    text: qsTr("WTI CrudeOil")
                     anchors.centerIn: parent
                 }
                 width: 120

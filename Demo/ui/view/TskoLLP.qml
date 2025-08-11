@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls
-
+import QtCharts
 import TskoLlp
 
 Page {
@@ -10,6 +10,11 @@ Page {
     anchors.right: parent.right
     anchors.top: parent.top
     anchors.bottom: parent.bottom
+    property double open: parseFloat(TskoLlp.open[0])
+    property double high: parseFloat(TskoLlp.high[0])
+    property double low: parseFloat(TskoLlp.low[0])
+    property double close: parseFloat(TskoLlp.close[0])
+    property double volume: parseFloat(TskoLlp.volume[0])
     Rectangle {
         width: parent.width
         height: parent.height

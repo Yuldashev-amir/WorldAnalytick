@@ -9,7 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/BrentCrude.qml" line="228"/>
+        <location filename="../../ui/view/BrentCrude.qml" line="260"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22,7 +22,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="228"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="260"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
@@ -55,7 +55,7 @@
     <name>MenuSideBar</name>
     <message>
         <location filename="../../ui/view/MenuSideBar.qml" line="61"/>
-        <source>Цены на нефть</source>
+        <source>WTI CrudeOil</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -82,12 +82,12 @@
 <context>
     <name>NaturelGasLot</name>
     <message>
-        <location filename="../../ui/view/NaturelGasLot.qml" line="41"/>
+        <location filename="../../ui/view/NaturelGasLot.qml" line="43"/>
         <source>Naturel Gas prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/NaturelGasLot.qml" line="228"/>
+        <location filename="../../ui/view/NaturelGasLot.qml" line="262"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
@@ -122,12 +122,12 @@
 <context>
     <name>TskoLLP</name>
     <message>
-        <location filename="../../ui/view/TskoLLP.qml" line="32"/>
+        <location filename="../../ui/view/TskoLLP.qml" line="37"/>
         <source>Price active company TSKO LLP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/TskoLLP.qml" line="138"/>
+        <location filename="../../ui/view/TskoLLP.qml" line="143"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>

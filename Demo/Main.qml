@@ -11,6 +11,68 @@ Window {
     visible: true
     width: 640
     color: "transparent"
+    Component.onCompleted: Qt.uiLanguage = "kk"
+
+    Shortcut {
+        context: Qt.ApplicationShortcut
+        sequence: StandardKey.Quit
+
+        onActivated: Qt.quit()
+    }
+
+    RowLayout {
+        property var step: parent.height / 8
+        anchors.rightMargin: step / 2
+        anchors.left: parent.right
+        anchors.top: parent.top
+        anchors.topMargin: step / 2
+        height: step
+        spacing: step / 8
+        TabBar {
+            id: tabBar
+
+            implicitHeight: burgerMenu.height
+            implicitWidth: parent.width / 8
+            background: Rectangle {
+                color: "transparent"
+            }
+
+            // currentIndex: swipeView.currentIndex
+            TabButton {
+                text: "kk"
+
+                background: Rectangle {
+                    color: tabBar.currentIndex == 0 ? "orange" : "yellow"
+                }
+
+                onClicked: {
+                    Qt.uiLanguage = "kk"
+                }
+            }
+            TabButton {
+                text: "ru"
+
+                background: Rectangle {
+                    color: tabBar.currentIndex == 1 ? "orange" : "yellow"
+                }
+
+                onClicked: {
+                    Qt.uiLanguage = "ru"
+                }
+            }
+            TabButton {
+                text: "en"
+
+                background: Rectangle {
+                    color: tabBar.currentIndex == 2 ? "orange" : "yellow"
+                }
+
+                onClicked: {
+                    Qt.uiLanguage = "en"
+                }
+            }
+        }
+    }
     Rectangle {
         width: parent.width
         height: parent.height

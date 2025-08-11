@@ -10,7 +10,7 @@ Page {
     anchors.right: parent.right
     anchors.top: parent.top
     anchors.bottom: parent.bottom
-    visible: true
+
     Rectangle {
         id: sideBar
         width: parent.width
@@ -22,13 +22,13 @@ Page {
         Image {
             width: parent.width
             height: parent.height
-            source: "file:///home/amir/ProjectsQT/WorldAnalytick/demo/Demo/res/img/transparent-oily-bubbles-vibrant-copy-space-watery-background.jpg"
+            source: "file:///home/amir/ProjectsQT/WorldAnalytick/demo/Demo/res/img/background7.jpg"
             fillMode: Image.PreserveAspectCrop
             anchors.fill: parent
         }
         Rectangle {
             id: dateInput
-            width: parent.width / 2
+            width: parent.width
             height: parent.height
             color: "transparent"
             anchors {
@@ -78,8 +78,9 @@ Page {
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
-                anchors.left: parent.left
                 topPadding: 120
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil1
@@ -87,8 +88,9 @@ Page {
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
-                anchors.left: parent.left
                 topPadding: 140
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices2
@@ -96,8 +98,9 @@ Page {
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
-                anchors.left: parent.left
                 topPadding: 185
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil2
@@ -105,8 +108,9 @@ Page {
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
-                anchors.left: parent.left
                 topPadding: 210
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices3
@@ -114,8 +118,9 @@ Page {
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
-                anchors.left: parent.left
                 topPadding: 250
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil3
@@ -123,8 +128,9 @@ Page {
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
-                anchors.left: parent.left
                 topPadding: 275
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices4
@@ -132,8 +138,9 @@ Page {
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
-                anchors.left: parent.left
                 topPadding: 310
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil4
@@ -141,8 +148,9 @@ Page {
                 font.pixelSize: 18
                 color: "white"
                 wrapMode: Text.Wrap
-                anchors.left: parent.left
                 topPadding: 330
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices5
@@ -151,7 +159,10 @@ Page {
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
+                anchors.bottomMargin: 30
                 topPadding: 120
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil5
@@ -160,7 +171,10 @@ Page {
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
+                anchors.bottomMargin: 30
                 topPadding: 140
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices6
@@ -169,7 +183,10 @@ Page {
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
+                anchors.bottomMargin: 50
                 topPadding: 185
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil6
@@ -178,7 +195,10 @@ Page {
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
+                anchors.bottomMargin: 50
                 topPadding: 210
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices7
@@ -187,7 +207,10 @@ Page {
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
+                anchors.bottomMargin: 50
                 topPadding: 250
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil7
@@ -196,7 +219,10 @@ Page {
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
+                anchors.bottomMargin: 50
                 topPadding: 275
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices8
@@ -205,7 +231,10 @@ Page {
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
+                anchors.bottomMargin: 50
                 topPadding: 310
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil8
@@ -214,7 +243,10 @@ Page {
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
+                anchors.bottomMargin: 50
                 topPadding: 330
+                rightPadding: 80
+                leftPadding: 80
             }
             Button {
                 id: buttonClear

@@ -4,6 +4,7 @@ NaturelGas::NaturelGas(QObject * parent) : QObject(parent)
 {
     manager = std::make_shared<QRestAccessManager>(&network);
     api = std::make_shared<QNetworkRequestFactory>();
+    api->setBaseUrl(m_url);
 }
 
 void NaturelGas::loadingPriceNatGas()

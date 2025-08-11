@@ -18,6 +18,8 @@ Page {
         color: "transparent"
         anchors {
             centerIn: parent
+            rightMargin: 60
+            leftMargin: 60
         }
         Image {
             width: parent.width
@@ -28,7 +30,7 @@ Page {
         }
         Rectangle {
             id: dateInput
-            width: parent.width / 2
+            width: parent.width
             height: parent.height
             color: "transparent"
             anchors {
@@ -48,7 +50,7 @@ Page {
             Text {
                 id: nameProd
                 text: qsTr(NaturelGas.NameProd)
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 25
                 color: "white"
                 anchors.horizontalCenter: parent.horizontalCenter
                 wrapMode: Text.Wrap
@@ -57,7 +59,7 @@ Page {
             Text {
                 id: interval
                 text: qsTr(NaturelGas.interval)
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 anchors.horizontalCenter: parent.horizontalCenter
                 wrapMode: Text.Wrap
@@ -66,7 +68,7 @@ Page {
             Text {
                 id: dateProd
                 text: qsTr(NaturelGas.unit)
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: "white"
                 wrapMode: Text.Wrap
@@ -75,146 +77,178 @@ Page {
             Text {
                 id: prices1
                 text: qsTr("Period: " + NaturelGas.date[0])
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 120
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil1
                 text: qsTr("Price: " + NaturelGas.price[0] + "$")
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 140
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices2
                 text: qsTr("Period: " + NaturelGas.date[1])
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 185
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil2
                 text: qsTr("Price: " + NaturelGas.price[1] + "$")
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 210
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices3
                 text: qsTr("Period: " + NaturelGas.date[2])
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 250
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil3
                 text: qsTr("Price: " + NaturelGas.price[2] + "$")
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 275
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices4
                 text: qsTr("Period: " + NaturelGas.date[3])
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 310
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil4
                 text: qsTr("Price: " + NaturelGas.price[3] + "$")
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 topPadding: 330
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices5
                 text: qsTr("Period: " + NaturelGas.date[4])
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
                 anchors.bottomMargin: 30
                 topPadding: 120
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil5
                 text: qsTr("Price: " + NaturelGas.price[4] + "$")
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
                 anchors.bottomMargin: 30
                 topPadding: 140
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices6
                 text: qsTr("Period: " + NaturelGas.date[5])
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
                 anchors.bottomMargin: 50
                 topPadding: 185
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil6
                 text: qsTr("Price: " + NaturelGas.price[5] + "$")
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
                 anchors.bottomMargin: 50
                 topPadding: 210
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices7
                 text: qsTr("Period: " + NaturelGas.date[6])
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
                 anchors.bottomMargin: 50
                 topPadding: 250
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil7
                 text: qsTr("Price: " + NaturelGas.price[6] + "$")
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
                 anchors.bottomMargin: 50
                 topPadding: 275
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: prices8
                 text: qsTr("Period: " + NaturelGas.date[7])
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
                 anchors.bottomMargin: 50
                 topPadding: 310
+                rightPadding: 80
+                leftPadding: 80
             }
             Text {
                 id: dateCrudeOil8
                 text: qsTr("Price: " + NaturelGas.price[7] + "$")
-                font.pixelSize: 18
+                font.pixelSize: parent.width / 28
                 color: "white"
                 wrapMode: Text.Wrap
                 anchors.right: parent.right
                 anchors.bottomMargin: 50
                 topPadding: 330
+                rightPadding: 80
+                leftPadding: 80
             }
             Button {
                 id: buttonClear
