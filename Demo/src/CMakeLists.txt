@@ -19,7 +19,9 @@ list(
   src/BrentCrudeOil.cpp
   src/BrentCrudeOil.h
   src/NaturelGas.cpp
-  src/NaturelGas.h)
+  src/NaturelGas.h
+  src/ShopTrt.cpp
+  src/ShopTrt.h)
 
 set(_CPP_SOURCE_FILES
     ${_CPP_SOURCE_FILES}

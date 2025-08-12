@@ -1,15 +1,15 @@
-#include "TskoLlp.h"
+#include "ShopTrt.h"
 
-TskoLlp::TskoLlp(QObject * parent) : QObject(parent)
+ShopTrt::ShopTrt(QObject * parent) : QObject(parent)
 {
     manager = std::make_unique<QRestAccessManager>(&network);
     api = std::make_unique<QNetworkRequestFactory>();
     api->setBaseUrl(m_urlTskoLlp);
 }
 
-void TskoLlp::loadingTskoLlp()
+void ShopTrt::loadingShopTrt()
 {
-    QPointer<TskoLlp> guard(this);
+    QPointer<ShopTrt> guard(this);
     manager->get(api->createRequest(), nullptr, guard, [guard](QRestReply & reply) {
         if (reply.isSuccess())
         {
@@ -58,10 +58,10 @@ void TskoLlp::loadingTskoLlp()
                 if (object.contains("Time Series (Daily)") && object["Time Series (Daily)"].isObject())
                 {
                     dateObject = object["Time Series (Daily)"].toObject();
-                    if (dateObject.contains("2025-08-07") && dateObject["2025-08-07"].isObject())
+                    if (dateObject.contains("2025-08-11") && dateObject["2025-08-11"].isObject())
                     {
-                        qWarning() << "Date object" << dateObject["2025-08-07"].toObject();
-                        QJsonObject time = dateObject["2025-08-07"].toObject();
+                        qWarning() << "Date object" << dateObject["2025-08-11"].toObject();
+                        QJsonObject time = dateObject["2025-08-11"].toObject();
                         QVariantList openListValue;
                         QVariantList highListValue;
                         QVariantList lowListValue;
@@ -102,15 +102,15 @@ void TskoLlp::loadingTskoLlp()
             }
         }
     });
-            emit loadingNewData();
+    emit loadingNewData();
 }
 
-QUrl TskoLlp::urlTskoLlp() const
+QUrl ShopTrt::urlTskoLlp() const
 {
     return m_urlTskoLlp;
 }
 
-void TskoLlp::setUrlTskoLlp(const QUrl &newUrlTskoLlp)
+void ShopTrt::setUrlTskoLlp(const QUrl &newUrlTskoLlp)
 {
     if (m_urlTskoLlp == newUrlTskoLlp)
         return;
@@ -118,12 +118,12 @@ void TskoLlp::setUrlTskoLlp(const QUrl &newUrlTskoLlp)
     emit urlTskoLlpChanged();
 }
 
-QString TskoLlp::info() const
+QString ShopTrt::info() const
 {
     return m_info;
 }
 
-void TskoLlp::setInfo(const QString &newInfo)
+void ShopTrt::setInfo(const QString &newInfo)
 {
     if (m_info == newInfo)
         return;
@@ -131,12 +131,12 @@ void TskoLlp::setInfo(const QString &newInfo)
     emit infoChanged();
 }
 
-QString TskoLlp::symbol() const
+QString ShopTrt::symbol() const
 {
     return m_symbol;
 }
 
-void TskoLlp::setSymbol(const QString &newSymbol)
+void ShopTrt::setSymbol(const QString &newSymbol)
 {
     if (m_symbol == newSymbol)
         return;
@@ -144,12 +144,12 @@ void TskoLlp::setSymbol(const QString &newSymbol)
     emit symbolChanged();
 }
 
-QString TskoLlp::dateRefreshed() const
+QString ShopTrt::dateRefreshed() const
 {
     return m_dateRefreshed;
 }
 
-void TskoLlp::setDateRefreshed(const QString &newDateRefreshed)
+void ShopTrt::setDateRefreshed(const QString &newDateRefreshed)
 {
     if (m_dateRefreshed == newDateRefreshed)
         return;
@@ -157,12 +157,12 @@ void TskoLlp::setDateRefreshed(const QString &newDateRefreshed)
     emit dateRefreshedChanged();
 }
 
-QString TskoLlp::outSize() const
+QString ShopTrt::outSize() const
 {
     return m_outSize;
 }
 
-void TskoLlp::setOutSize(const QString &newOutSize)
+void ShopTrt::setOutSize(const QString &newOutSize)
 {
     if (m_outSize == newOutSize)
         return;
@@ -170,12 +170,12 @@ void TskoLlp::setOutSize(const QString &newOutSize)
     emit outSizeChanged();
 }
 
-QString TskoLlp::zone() const
+QString ShopTrt::zone() const
 {
     return m_zone;
 }
 
-void TskoLlp::setZone(const QString &newZone)
+void ShopTrt::setZone(const QString &newZone)
 {
     if (m_zone == newZone)
         return;
@@ -183,12 +183,12 @@ void TskoLlp::setZone(const QString &newZone)
     emit zoneChanged();
 }
 
-QString TskoLlp::date() const
+QString ShopTrt::date() const
 {
     return m_date;
 }
 
-void TskoLlp::setDate(const QString &newDate)
+void ShopTrt::setDate(const QString &newDate)
 {
     if (m_date == newDate)
         return;
@@ -196,12 +196,12 @@ void TskoLlp::setDate(const QString &newDate)
     emit dateChanged();
 }
 
-QVariantList TskoLlp::open() const
+QVariantList ShopTrt::open() const
 {
     return m_open;
 }
 
-void TskoLlp::setOpen(const QVariantList &newOpen)
+void ShopTrt::setOpen(const QVariantList &newOpen)
 {
     if (m_open == newOpen)
         return;
@@ -209,12 +209,12 @@ void TskoLlp::setOpen(const QVariantList &newOpen)
     emit openChanged();
 }
 
-QVariantList TskoLlp::high() const
+QVariantList ShopTrt::high() const
 {
     return m_high;
 }
 
-void TskoLlp::setHigh(const QVariantList &newHigh)
+void ShopTrt::setHigh(const QVariantList &newHigh)
 {
     if (m_high == newHigh)
         return;
@@ -222,12 +222,12 @@ void TskoLlp::setHigh(const QVariantList &newHigh)
     emit highChanged();
 }
 
-QVariantList TskoLlp::low() const
+QVariantList ShopTrt::low() const
 {
     return m_low;
 }
 
-void TskoLlp::setlow(const QVariantList &newLow)
+void ShopTrt::setlow(const QVariantList &newLow)
 {
     if (m_low == newLow)
         return;
@@ -235,12 +235,12 @@ void TskoLlp::setlow(const QVariantList &newLow)
     emit lowChanged();
 }
 
-QVariantList TskoLlp::close() const
+QVariantList ShopTrt::close() const
 {
     return m_close;
 }
 
-void TskoLlp::setClose(const QVariantList &newClose)
+void ShopTrt::setClose(const QVariantList &newClose)
 {
     if (m_close == newClose)
         return;
@@ -248,12 +248,12 @@ void TskoLlp::setClose(const QVariantList &newClose)
     emit closeChanged();
 }
 
-QVariantList TskoLlp::volume() const
+QVariantList ShopTrt::volume() const
 {
     return m_volume;
 }
 
-void TskoLlp::setVolume(const QVariantList &newVolume)
+void ShopTrt::setVolume(const QVariantList &newVolume)
 {
     if (m_volume == newVolume)
         return;

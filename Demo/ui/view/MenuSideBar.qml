@@ -5,6 +5,7 @@ import CrudeOil
 import TskoLlp
 import BrentCrudeOil
 import NaturelGas
+import ShopTrt
 
 Page {
     id: rootSd
@@ -96,10 +97,10 @@ Page {
                 onClicked: {
                     if (rootSd.onClicked === true) {
                         rootSd.onClicked = false
-                        rootSd.sectionTskoLlp("new")
+                        rootSd.sectionSelected("new")
                         console.log("Button Second clicked")
                     }
-                    rootSd.sectionTskoLlp("TskoLlp")
+                    rootSd.sectionSelected("TskoLlp")
                     console.log("Button clicked")
                     TskoLlp.loadingTskoLlp()
                     rootSd.onClicked = true
@@ -123,12 +124,13 @@ Page {
                 onClicked: {
                     if (rootSd.onClicked === true) {
                         rootSd.onClicked = false
-                        rootSd.sectionShopTrt("new")
+                        rootSd.sectionSelected("new")
                         console.log("Button third clicked")
                     }
                     console.log("Button clicked")
-                    rootSd.sectionShopTrt("ShopTRT")
+                    rootSd.sectionSelected("ShopTRT")
                     rootSd.onClicked = true
+                    ShopTrt.loadingShopTrt()
                 }
             }
 
@@ -147,7 +149,7 @@ Page {
                 }
                 onClicked: {
                     console.log("Button four clicked")
-                    rootSd.sectionBrentCrudeOil("BrentCrudeOil")
+                    rootSd.sectionSelected("BrentCrudeOil")
                     BrentCrudeOil.loadingBrentData()
                 }
             }
@@ -167,7 +169,7 @@ Page {
                 }
                 onClicked: {
                     console.log("Button five clicked")
-                    rootSd.sectionNatureGas("NaturalGase")
+                    rootSd.sectionSelected("NaturalGase")
                     NaturelGas.loadingPriceNatGas()
                 }
             }

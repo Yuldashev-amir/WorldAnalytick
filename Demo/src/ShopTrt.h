@@ -1,5 +1,5 @@
-#ifndef TSKOLLP_H
-#define TSKOLLP_H
+#ifndef SHOPTRT_H
+#define SHOPTRT_H
 
 #include <QObject>
 #include <QQmlEngine>
@@ -16,7 +16,7 @@
 #include <QUrl>
 #include <QString>
 #include <QStringList>
-class TskoLlp : public QObject
+class ShopTrt : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
@@ -33,11 +33,13 @@ class TskoLlp : public QObject
     Q_PROPERTY(QVariantList close READ close WRITE setClose NOTIFY closeChanged)
     Q_PROPERTY(QVariantList volume READ volume WRITE setVolume NOTIFY volumeChanged)
 public:
-    explicit TskoLlp(QObject * parent = nullptr);
-    Q_INVOKABLE void loadingTskoLlp();
+    explicit ShopTrt(QObject * parent = nullptr);
+
+    Q_INVOKABLE void loadingShopTrt();
 
     QUrl urlTskoLlp() const;
     void setUrlTskoLlp(const QUrl &newUrlTskoLlp);
+
     QString info() const;
     void setInfo(const QString &newInfo);
 
@@ -73,6 +75,7 @@ public:
 
 signals:
     void urlTskoLlpChanged();
+
     void infoChanged();
 
     void symbolChanged();
@@ -100,7 +103,7 @@ private:
     QNetworkAccessManager network;
     std::unique_ptr<QRestAccessManager> manager;
     std::unique_ptr<QNetworkRequestFactory> api;
-    QUrl m_urlTskoLlp = QUrl("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=TSCO.LON&outputsize=full&apikey=demo");
+    QUrl m_urlTskoLlp;
     QString m_info;
     QString m_symbol;
     QString m_dateRefreshed;
@@ -114,4 +117,4 @@ private:
     QVariantList m_volume;
 };
 
-#endif // TSKOLLP_H
+#endif // SHOPTRT_H

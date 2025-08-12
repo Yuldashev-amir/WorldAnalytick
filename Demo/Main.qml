@@ -95,24 +95,20 @@ Window {
     }
     property bool menuVisible: false
     property string visibleConnection: ""
-    property string visibleActionPrice: ""
-    property string visibleShopTrt: ""
-    property string visibleBrentCrudeOil: ""
-    property string visibleNaturalGase: ""
     InputCrudeOil {
         visible: root.visibleConnection === "CrudeOil"
     }
     TskoLLP {
-        visible: root.visibleActionPrice === "TskoLlp"
+        visible: root.visibleConnection === "TskoLlp"
     }
     ShopTRT {
-        visible: root.visibleShopTrt === "ShopTRT"
+        visible: root.visibleConnection === "ShopTRT"
     }
     BrentCrude {
-        visible: root.visibleBrentCrudeOil === "BrentCrudeOil"
+        visible: root.visibleConnection === "BrentCrudeOil"
     }
     NaturelGasLot {
-        visible: root.visibleNaturalGase === "NaturalGase"
+        visible: root.visibleConnection === "NaturalGase"
     }
     Button {
         id: burgerMenu

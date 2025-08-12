@@ -270,7 +270,7 @@ Page {
                 }
 
                 onClicked: {
-                    visibleNaturalGase = "new"
+                    visibleConnection = "new"
                 }
             }
         }

@@ -4,12 +4,12 @@
 <context>
     <name>BrentCrude</name>
     <message>
-        <location filename="../../ui/view/BrentCrude.qml" line="41"/>
+        <location filename="../../ui/view/BrentCrude.qml" line="44"/>
         <source>Credo Oil global prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/BrentCrude.qml" line="260"/>
+        <location filename="../../ui/view/BrentCrude.qml" line="207"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
@@ -50,27 +50,27 @@
 <context>
     <name>MenuSideBar</name>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="61"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="62"/>
         <source>WTI CrudeOil</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="86"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="87"/>
         <source>Акции TSKO LLP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="113"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="114"/>
         <source>Акции SHOP TRT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="139"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="141"/>
         <source>Brent CrudeOil Lots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="159"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="161"/>
         <source>Naturel Gas Lots</source>
         <translation type="unfinished"></translation>
     </message>
@@ -91,39 +91,15 @@
 <context>
     <name>ShopTRT</name>
     <message>
-        <location filename="../../ui/view/ShopTRT.qml" line="29"/>
-        <source>Price active company SHOP TRT</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/view/ShopTRT.qml" line="37"/>
-        <location filename="../../ui/view/ShopTRT.qml" line="53"/>
-        <location filename="../../ui/view/ShopTRT.qml" line="61"/>
-        <location filename="../../ui/view/ShopTRT.qml" line="69"/>
-        <location filename="../../ui/view/ShopTRT.qml" line="77"/>
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/view/ShopTRT.qml" line="45"/>
-        <source>About: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/view/ShopTRT.qml" line="95"/>
-        <source>Crear</source>
+        <location filename="../../ui/view/ShopTRT.qml" line="144"/>
+        <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TskoLLP</name>
     <message>
-        <location filename="../../ui/view/TskoLLP.qml" line="37"/>
-        <source>Price active company TSKO LLP</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../ui/view/TskoLLP.qml" line="143"/>
+        <location filename="../../ui/view/TskoLLP.qml" line="144"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
