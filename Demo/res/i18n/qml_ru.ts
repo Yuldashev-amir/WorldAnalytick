@@ -4,6 +4,14 @@
 <context>
     <name>BrentCrude</name>
     <message>
+        <source>Мировые цены на нефть WTI</source>
+        <translation type="obsolete">Мировые цены на нефть WTI</translation>
+    </message>
+    <message>
+        <source>Очистить</source>
+        <translation type="obsolete">Очистить</translation>
+    </message>
+    <message>
         <location filename="../../ui/view/BrentCrude.qml" line="44"/>
         <source>Credo Oil global prices</source>
         <translation type="unfinished"></translation>
@@ -11,20 +19,45 @@
     <message>
         <location filename="../../ui/view/BrentCrude.qml" line="207"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Очистить</translation>
+    </message>
+</context>
+<context>
+    <name>CopperPriceLot</name>
+    <message>
+        <source>Цены на природный газ</source>
+        <translation type="obsolete">Цены на природный газ</translation>
+    </message>
+    <message>
+        <source>Очистить</source>
+        <translation type="obsolete">Очистить</translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/CopperPriceLot.qml" line="44"/>
+        <source>Naturel Gas prices lots</source>
+        <translation type="unfinished">Цены на природный газ</translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/CopperPriceLot.qml" line="207"/>
+        <source>Clear</source>
+        <translation type="unfinished">Очистить</translation>
     </message>
 </context>
 <context>
     <name>InputCrudeOil</name>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="41"/>
+        <source>Мировые цены на нефть</source>
+        <translation type="obsolete">Мировые цены на нефть</translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="34"/>
         <source>Credo Oil global prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="260"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="201"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Очистить</translation>
     </message>
 </context>
 <context>
@@ -54,66 +87,75 @@
 <context>
     <name>MenuSideBar</name>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="62"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="64"/>
         <source>WTI CrudeOil</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">WTI нефть</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="87"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="89"/>
         <source>Акции TSKO LLP</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Акции TSKO LLP</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="114"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="116"/>
         <source>Акции SHOP TRT</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Акции SHOP TRT</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="141"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="143"/>
         <source>Brent CrudeOil Lots</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Нефть Brent</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="161"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="163"/>
         <source>Naturel Gas Lots</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Природный газ</translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/MenuSideBar.qml" line="183"/>
+        <source>Copper Lots</source>
+        <translation type="unfinished">Медь</translation>
     </message>
 </context>
 <context>
     <name>NaturelGasLot</name>
     <message>
-        <location filename="../../ui/view/NaturelGasLot.qml" line="43"/>
-        <source>Naturel Gas prices</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../ui/view/NaturelGasLot.qml" line="44"/>
+        <source>Naturel Gas prices lots</source>
+        <translation type="unfinished">Цены на природный газ</translation>
     </message>
     <message>
-        <location filename="../../ui/view/NaturelGasLot.qml" line="262"/>
+        <location filename="../../ui/view/NaturelGasLot.qml" line="207"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Очистить</translation>
     </message>
 </context>
 <context>
     <name>ShopTRT</name>
     <message>
-        <location filename="../../ui/view/ShopTRT.qml" line="144"/>
+        <location filename="../../ui/view/ShopTRT.qml" line="126"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Очистить</translation>
     </message>
 </context>
 <context>
     <name>TskoLLP</name>
     <message>
-        <location filename="../../ui/view/TskoLLP.qml" line="144"/>
+        <location filename="../../ui/view/TskoLLP.qml" line="126"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Очистить</translation>
     </message>
 </context>
 <context>
     <name>Util</name>
     <message>
+        <source>Текст</source>
+        <translation type="vanished">Текст</translation>
+    </message>
+    <message>
         <location filename="../../ui/view/Util.qml" line="14"/>
         <source>text</source>
-        <translation>Текст</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

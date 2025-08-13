@@ -15,14 +15,27 @@
     </message>
 </context>
 <context>
+    <name>CopperPriceLot</name>
+    <message>
+        <location filename="../../ui/view/CopperPriceLot.qml" line="44"/>
+        <source>Naturel Gas prices lots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/CopperPriceLot.qml" line="207"/>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InputCrudeOil</name>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="41"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="34"/>
         <source>Credo Oil global prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/InputCrudeOil.qml" line="260"/>
+        <location filename="../../ui/view/InputCrudeOil.qml" line="201"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54,40 +67,45 @@
 <context>
     <name>MenuSideBar</name>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="62"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="64"/>
         <source>WTI CrudeOil</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="87"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="89"/>
         <source>Акции TSKO LLP</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Active TSKO LLP</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="114"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="116"/>
         <source>Акции SHOP TRT</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Active SHOP TRT</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="141"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="143"/>
         <source>Brent CrudeOil Lots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="161"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="163"/>
         <source>Naturel Gas Lots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/MenuSideBar.qml" line="183"/>
+        <source>Copper Lots</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>NaturelGasLot</name>
     <message>
-        <location filename="../../ui/view/NaturelGasLot.qml" line="43"/>
-        <source>Naturel Gas prices</source>
+        <location filename="../../ui/view/NaturelGasLot.qml" line="44"/>
+        <source>Naturel Gas prices lots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../ui/view/NaturelGasLot.qml" line="262"/>
+        <location filename="../../ui/view/NaturelGasLot.qml" line="207"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
@@ -95,7 +113,7 @@
 <context>
     <name>ShopTRT</name>
     <message>
-        <location filename="../../ui/view/ShopTRT.qml" line="144"/>
+        <location filename="../../ui/view/ShopTRT.qml" line="126"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
@@ -103,7 +121,7 @@
 <context>
     <name>TskoLLP</name>
     <message>
-        <location filename="../../ui/view/TskoLLP.qml" line="144"/>
+        <location filename="../../ui/view/TskoLLP.qml" line="126"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>

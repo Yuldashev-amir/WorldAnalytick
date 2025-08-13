@@ -21,7 +21,9 @@ list(
   src/NaturelGas.cpp
   src/NaturelGas.h
   src/ShopTrt.cpp
-  src/ShopTrt.h)
+  src/ShopTrt.h
+  src/CopperPrices.cpp
+  src/CopperPrices.h)
 
 set(_CPP_SOURCE_FILES
     ${_CPP_SOURCE_FILES}

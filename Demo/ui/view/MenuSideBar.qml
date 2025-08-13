@@ -6,6 +6,7 @@ import TskoLlp
 import BrentCrudeOil
 import NaturelGas
 import ShopTrt
+import CopperPrices
 
 Page {
     id: rootSd
@@ -15,6 +16,7 @@ Page {
     signal sectionShopTrt(string sectionName)
     signal sectionBrentCrudeOil(string sectionName)
     signal sectionNatureGas(string sectionName)
+    signal sectionCopperPrices(string sectionName)
     z: 1
     Rectangle {
         id: rectSideBar
@@ -172,6 +174,33 @@ Page {
                     rootSd.sectionSelected("NaturalGase")
                     NaturelGas.loadingPriceNatGas()
                 }
+            }
+
+            Button {
+                id: btnSix
+                Text {
+                    id: textSixBtn
+                    text: qsTr("Copper Lots")
+                    anchors.centerIn: parent
+                }
+                width: 120
+                height: 40
+                hoverEnabled: true
+                background: Rectangle {
+                    color: btnSix.hovered ? "lightblue" : "purple"
+                }
+                onClicked: {
+                    console.log("Button Six clicked")
+                    rootSd.sectionSelected("CopperPrices")
+                    CopperPrices.loadingCopperPrices()
+                }
+            }
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                console.log("Closed new window")
+                rootSd.sectionSelected("new")
             }
         }
     }

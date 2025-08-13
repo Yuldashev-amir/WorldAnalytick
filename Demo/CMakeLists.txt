@@ -8,6 +8,7 @@ set(MODULE_NAME Demo)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick Qml LinguistTools Network Charts)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 set(_CPP_SOURCE_FILES)
 set(_QML_SOURCES)
@@ -29,7 +30,6 @@ qt_add_executable(${TARGET_NAME} ${_CPP_SOURCE_FILES})
 
 target_link_libraries(demo PRIVATE Qt6::Core)
 target_link_libraries(demo PRIVATE Qt6::Charts)
-target_link_libraries(demo PRIVATE Qt6::Core)
 set_source_files_properties(${_QML_SINGLETONS} PROPERTIES QT_QML_SINGLETON_TYPE
                                                           TRUE)
 qt_add_qml_module(

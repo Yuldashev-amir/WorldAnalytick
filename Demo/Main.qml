@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-
+import CopperPrices
 import Demo
 
 Window {
@@ -18,60 +18,6 @@ Window {
         sequence: StandardKey.Quit
 
         onActivated: Qt.quit()
-    }
-
-    RowLayout {
-        property var step: parent.height / 8
-        anchors.rightMargin: step / 2
-        anchors.left: parent.right
-        anchors.top: parent.top
-        anchors.topMargin: step / 2
-        height: step
-        spacing: step / 8
-        TabBar {
-            id: tabBar
-
-            implicitHeight: burgerMenu.height
-            implicitWidth: parent.width / 8
-            background: Rectangle {
-                color: "transparent"
-            }
-
-            // currentIndex: swipeView.currentIndex
-            TabButton {
-                text: "kk"
-
-                background: Rectangle {
-                    color: tabBar.currentIndex == 0 ? "orange" : "yellow"
-                }
-
-                onClicked: {
-                    Qt.uiLanguage = "kk"
-                }
-            }
-            TabButton {
-                text: "ru"
-
-                background: Rectangle {
-                    color: tabBar.currentIndex == 1 ? "orange" : "yellow"
-                }
-
-                onClicked: {
-                    Qt.uiLanguage = "ru"
-                }
-            }
-            TabButton {
-                text: "en"
-
-                background: Rectangle {
-                    color: tabBar.currentIndex == 2 ? "orange" : "yellow"
-                }
-
-                onClicked: {
-                    Qt.uiLanguage = "en"
-                }
-            }
-        }
     }
     Rectangle {
         width: parent.width
@@ -93,6 +39,7 @@ Window {
             }
         }
     }
+
     property bool menuVisible: false
     property string visibleConnection: ""
     InputCrudeOil {
@@ -110,6 +57,10 @@ Window {
     NaturelGasLot {
         visible: root.visibleConnection === "NaturalGase"
     }
+    CopperPriceLot {
+        visible: root.visibleConnection === "CopperPrices"
+    }
+
     Button {
         id: burgerMenu
         width: 50
@@ -138,20 +89,71 @@ Window {
                                console.log(sectionName)
                            }
         onSectionTskoLlp: sectionName => {
-                              visibleActionPrice = sectionName
+                              visibleConnection = sectionName
                               console.log(sectionName)
                           }
         onSectionShopTrt: sectionName => {
-                              visibleShopTrt = sectionName
+                              visibleConnection = sectionName
                               console.log(sectionName)
                           }
         onSectionBrentCrudeOil: sectionName => {
-                                    visibleBrentCrudeOil = sectionName
+                                    visibleConnection = sectionName
                                     console.log(sectionName)
                                 }
         onSectionNatureGas: sectionName => {
-                                visibleNaturalGase = sectionName
+                                visibleConnection = sectionName
                                 console.log(sectionName)
                             }
+        onSectionCopperPrices: sectionName => {
+                                   visibleConnection = sectionName
+                                   console.log(sectionName)
+                               }
+    }
+    TabBar {
+        id: tabBar
+
+        width: 100
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.rightMargin: 20
+        anchors.topMargin: 15
+        background: Rectangle {
+            color: "transparent"
+        }
+
+        // currentIndex: swipeView.currentIndex
+        TabButton {
+            text: "kk"
+            width: implicitWidth
+            background: Rectangle {
+                color: tabBar.currentIndex == 0 ? "white" : "black"
+            }
+
+            onClicked: {
+                Qt.uiLanguage = "kk"
+            }
+        }
+        TabButton {
+            text: "ru"
+            width: implicitWidth
+            background: Rectangle {
+                color: tabBar.currentIndex == 1 ? "white" : "black"
+            }
+
+            onClicked: {
+                Qt.uiLanguage = "ru"
+            }
+        }
+        TabButton {
+            text: "en"
+            width: implicitWidth
+            background: Rectangle {
+                color: tabBar.currentIndex == 2 ? "white" : "black"
+            }
+
+            onClicked: {
+                Qt.uiLanguage = "en"
+            }
+        }
     }
 }

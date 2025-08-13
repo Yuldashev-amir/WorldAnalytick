@@ -24,7 +24,7 @@ Page {
 
         Text {
             id: textTitle
-            text: "OHLCV graphic activeprices TSKO LLP"
+            text: "OHLCV graphic active prices TSKO LLP"
             anchors.horizontalCenter: parent.horizontalCenter
             font.pixelSize: 20
             font.bold: true
@@ -38,24 +38,6 @@ Page {
             antialiasing: true
 
             property var candles: [{
-                    "open": ShopTrt.open[0],
-                    "high": ShopTrt.high[0],
-                    "low": ShopTrt.low[0],
-                    "close": ShopTrt.close[0],
-                    "volume": ShopTrt.volume[0]
-                }, {
-                    "open": ShopTrt.open[0],
-                    "high": ShopTrt.high[0],
-                    "low": ShopTrt.low[0],
-                    "close": ShopTrt.close[0],
-                    "volume": ShopTrt.volume[0]
-                }, {
-                    "open": ShopTrt.open[0],
-                    "high": ShopTrt.high[0],
-                    "low": ShopTrt.low[0],
-                    "close": ShopTrt.close[0],
-                    "volume": ShopTrt.volume[0]
-                }, {
                     "open": ShopTrt.open[0],
                     "high": ShopTrt.high[0],
                     "low": ShopTrt.low[0],
@@ -87,7 +69,7 @@ Page {
                     var y = chartHeight - (p - minPrice) * scaleY
                     ctx.moveTo(0, y)
                     ctx.lineTo(width, y)
-                    // Подпись цены
+
                     ctx.fillStyle = "white"
                     ctx.font = "12px sans-serif"
                     ctx.fillText(p.toFixed(2), 2, y - 2)

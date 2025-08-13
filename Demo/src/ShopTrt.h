@@ -103,7 +103,7 @@ private:
     QNetworkAccessManager network;
     std::unique_ptr<QRestAccessManager> manager;
     std::unique_ptr<QNetworkRequestFactory> api;
-    QUrl m_urlTskoLlp;
+    QUrl m_urlTskoLlp = QUrl("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=SHOP.TRT&outputsize=full&apikey=demo");
     QString m_info;
     QString m_symbol;
     QString m_dateRefreshed;

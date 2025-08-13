@@ -43,24 +43,6 @@ Page {
                     "low": TskoLlp.low[0],
                     "close": TskoLlp.close[0],
                     "volume": TskoLlp.volume[0]
-                }, {
-                    "open": TskoLlp.open[0],
-                    "high": TskoLlp.high[0],
-                    "low": TskoLlp.low[0],
-                    "close": TskoLlp.close[0],
-                    "volume": TskoLlp.volume[0]
-                }, {
-                    "open": TskoLlp.open[0],
-                    "high": TskoLlp.high[0],
-                    "low": TskoLlp.low[0],
-                    "close": TskoLlp.close[0],
-                    "volume": TskoLlp.volume[0]
-                }, {
-                    "open": TskoLlp.open[0],
-                    "high": TskoLlp.high[0],
-                    "low": TskoLlp.low[0],
-                    "close": TskoLlp.close[0],
-                    "volume": TskoLlp.volume[0]
                 }]
 
             onPaint: {
@@ -87,7 +69,7 @@ Page {
                     var y = chartHeight - (p - minPrice) * scaleY
                     ctx.moveTo(0, y)
                     ctx.lineTo(width, y)
-                    // Подпись цены
+
                     ctx.fillStyle = "white"
                     ctx.font = "12px sans-serif"
                     ctx.fillText(p.toFixed(2), 2, y - 2)

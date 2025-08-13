@@ -17,9 +17,7 @@ Page {
         height: parent.height
         color: "transparent"
         anchors {
-            centerIn: parent
-            rightMargin: 60
-            leftMargin: 60
+            fill: parent
         }
         Image {
             width: parent.width
@@ -34,221 +32,168 @@ Page {
             height: parent.height
             color: "transparent"
             anchors {
-                centerIn: parent
+                fill: parent
                 top: parent.top
                 bottom: parent.bottom
             }
-            Text {
-                id: title
-                text: qsTr("Naturel Gas prices")
-                font.bold: true
-                font.pixelSize: 22
-                color: "white"
+            Column {
+                spacing: 10
                 anchors.horizontalCenter: parent.horizontalCenter
-                wrapMode: Text.Wrap
+                Text {
+                    id: title
+                    text: qsTr("Naturel Gas prices lots")
+                    font.bold: true
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: nameProd
+                    text: qsTr(NaturelGas.NameProd)
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: interval
+                    text: qsTr("Interval" + NaturelGas.interval)
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateProd
+                    text: qsTr(NaturelGas.unit)
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
             }
-            Text {
-                id: nameProd
-                text: qsTr(NaturelGas.NameProd)
-                font.pixelSize: parent.width / 25
-                color: "white"
-                anchors.horizontalCenter: parent.horizontalCenter
-                wrapMode: Text.Wrap
-                topPadding: 35
-            }
-            Text {
-                id: interval
-                text: qsTr(NaturelGas.interval)
-                font.pixelSize: parent.width / 28
-                color: "white"
-                anchors.horizontalCenter: parent.horizontalCenter
-                wrapMode: Text.Wrap
-                topPadding: 55
-            }
-            Text {
-                id: dateProd
-                text: qsTr(NaturelGas.unit)
-                font.pixelSize: parent.width / 28
-                anchors.horizontalCenter: parent.horizontalCenter
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 85
-            }
-            Text {
-                id: prices1
-                text: qsTr("Period: " + NaturelGas.date[0])
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 120
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: dateCrudeOil1
-                text: qsTr("Price: " + NaturelGas.price[0] + "$")
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 140
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: prices2
-                text: qsTr("Period: " + NaturelGas.date[1])
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 185
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: dateCrudeOil2
-                text: qsTr("Price: " + NaturelGas.price[1] + "$")
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 210
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: prices3
-                text: qsTr("Period: " + NaturelGas.date[2])
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 250
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: dateCrudeOil3
-                text: qsTr("Price: " + NaturelGas.price[2] + "$")
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 275
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: prices4
-                text: qsTr("Period: " + NaturelGas.date[3])
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 310
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: dateCrudeOil4
-                text: qsTr("Price: " + NaturelGas.price[3] + "$")
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                topPadding: 330
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: prices5
-                text: qsTr("Period: " + NaturelGas.date[4])
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
+            Column {
+                spacing: 10
                 anchors.right: parent.right
-                anchors.bottomMargin: 30
-                topPadding: 120
-                rightPadding: 80
-                leftPadding: 80
+                anchors.top: parent.top
+                anchors.topMargin: 185
+                anchors.rightMargin: 85
+                Text {
+                    id: prices1
+                    text: qsTr("Period: " + NaturelGas.date[0])
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateCrudeOil1
+                    text: qsTr("Price: " + NaturelGas.price[0] + "$")
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: prices2
+                    text: qsTr("Period: " + NaturelGas.date[1])
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateCrudeOil2
+                    text: qsTr("Price: " + NaturelGas.price[1] + "$")
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: prices3
+                    text: qsTr("Period: " + NaturelGas.date[2])
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateCrudeOil3
+                    text: qsTr("Price: " + NaturelGas.price[2] + "$")
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: prices4
+                    text: qsTr("Period: " + NaturelGas.date[3])
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateCrudeOil4
+                    text: qsTr("Price: " + NaturelGas.price[3] + "$")
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
             }
-            Text {
-                id: dateCrudeOil5
-                text: qsTr("Price: " + NaturelGas.price[4] + "$")
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                anchors.right: parent.right
-                anchors.bottomMargin: 30
-                topPadding: 140
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: prices6
-                text: qsTr("Period: " + NaturelGas.date[5])
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                anchors.right: parent.right
-                anchors.bottomMargin: 50
-                topPadding: 185
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: dateCrudeOil6
-                text: qsTr("Price: " + NaturelGas.price[5] + "$")
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                anchors.right: parent.right
-                anchors.bottomMargin: 50
-                topPadding: 210
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: prices7
-                text: qsTr("Period: " + NaturelGas.date[6])
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                anchors.right: parent.right
-                anchors.bottomMargin: 50
-                topPadding: 250
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: dateCrudeOil7
-                text: qsTr("Price: " + NaturelGas.price[6] + "$")
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                anchors.right: parent.right
-                anchors.bottomMargin: 50
-                topPadding: 275
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: prices8
-                text: qsTr("Period: " + NaturelGas.date[7])
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                anchors.right: parent.right
-                anchors.bottomMargin: 50
-                topPadding: 310
-                rightPadding: 80
-                leftPadding: 80
-            }
-            Text {
-                id: dateCrudeOil8
-                text: qsTr("Price: " + NaturelGas.price[7] + "$")
-                font.pixelSize: parent.width / 28
-                color: "white"
-                wrapMode: Text.Wrap
-                anchors.right: parent.right
-                anchors.bottomMargin: 50
-                topPadding: 330
-                rightPadding: 80
-                leftPadding: 80
+            Column {
+                spacing: 10
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.topMargin: 185
+                anchors.leftMargin: 85
+                Text {
+                    id: prices5
+                    text: qsTr("Period: " + NaturelGas.date[4])
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateCrudeOil5
+                    text: qsTr("Price: " + NaturelGas.price[4] + "$")
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: prices6
+                    text: qsTr("Period: " + NaturelGas.date[5])
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateCrudeOil6
+                    text: qsTr("Price: " + NaturelGas.price[5] + "$")
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: prices7
+                    text: qsTr("Period: " + NaturelGas.date[6])
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateCrudeOil7
+                    text: qsTr("Price: " + NaturelGas.price[6] + "$")
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: prices8
+                    text: qsTr("Period: " + NaturelGas.date[7])
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
+                Text {
+                    id: dateCrudeOil8
+                    text: qsTr("Price: " + NaturelGas.price[7] + "$")
+                    font.pixelSize: root.width / 37
+                    color: "white"
+                    wrapMode: Text.Wrap
+                }
             }
             Button {
                 id: buttonClear
