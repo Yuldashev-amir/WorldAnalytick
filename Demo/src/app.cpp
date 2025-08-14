@@ -10,6 +10,7 @@
 #include "NaturelGas.h"
 #include "ShopTrt.h"
 #include "CopperPrices.h"
+#include "WheatPrice.h"
 App::App(int &argc, char *argv[]) : QGuiApplication(argc, argv) {}
 
 App::~App() {}
@@ -31,12 +32,14 @@ int App::initApp(int argc, char *argv[]) {
   NaturelGas * gas = new NaturelGas;
   ShopTrt * shopTrt = new ShopTrt;
   CopperPrices * copper = new CopperPrices;
+  WheatPrice * wheat = new WheatPrice;
   qmlRegisterSingletonInstance("CrudeOil", 1, 0, "CrudeOil", crudeOil);
   qmlRegisterSingletonInstance("TskoLlp", 1, 0, "TskoLlp", tsko);
   qmlRegisterSingletonInstance("BrentCrudeOil", 1, 0, "BrentCrudeOil", brent);
   qmlRegisterSingletonInstance("NaturelGas", 1, 0, "NaturelGas", gas);
   qmlRegisterSingletonInstance("ShopTrt", 1, 0, "ShopTrt", shopTrt);
   qmlRegisterSingletonInstance("CopperPrices", 1, 0, "CopperPrices", copper);
+  qmlRegisterSingletonInstance("WheatPrice", 1, 0, "WheatPrice", wheat);
   // Define order of singletons creation
   engine.singletonInstance<Test *>(baseModuleName, "Test");
   engine.singletonInstance<Watcher *>(baseModuleName, "Watcher");

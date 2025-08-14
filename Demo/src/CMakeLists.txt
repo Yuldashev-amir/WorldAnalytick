@@ -23,7 +23,9 @@ list(
   src/ShopTrt.cpp
   src/ShopTrt.h
   src/CopperPrices.cpp
-  src/CopperPrices.h)
+  src/CopperPrices.h
+  src/WheatPrice.cpp
+  src/WheatPrice.h)
 
 set(_CPP_SOURCE_FILES
     ${_CPP_SOURCE_FILES}

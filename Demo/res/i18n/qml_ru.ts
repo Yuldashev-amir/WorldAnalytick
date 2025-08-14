@@ -5,7 +5,7 @@
     <name>BrentCrude</name>
     <message>
         <source>Мировые цены на нефть WTI</source>
-        <translation type="obsolete">Мировые цены на нефть WTI</translation>
+        <translation type="obsolete">Мировые цены на нефть Brent</translation>
     </message>
     <message>
         <source>Очистить</source>
@@ -35,7 +35,7 @@
     <message>
         <location filename="../../ui/view/CopperPriceLot.qml" line="44"/>
         <source>Naturel Gas prices lots</source>
-        <translation type="unfinished">Цены на природный газ</translation>
+        <translation type="unfinished">Цены на природный газ Henry Hub</translation>
     </message>
     <message>
         <location filename="../../ui/view/CopperPriceLot.qml" line="207"/>
@@ -47,7 +47,7 @@
     <name>InputCrudeOil</name>
     <message>
         <source>Мировые цены на нефть</source>
-        <translation type="obsolete">Мировые цены на нефть</translation>
+        <translation type="obsolete">Мировые цены на нефть WTI</translation>
     </message>
     <message>
         <location filename="../../ui/view/InputCrudeOil.qml" line="34"/>
@@ -87,34 +87,39 @@
 <context>
     <name>MenuSideBar</name>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="64"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="73"/>
         <source>WTI CrudeOil</source>
         <translation type="unfinished">WTI нефть</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="89"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="98"/>
         <source>Акции TSKO LLP</source>
         <translation type="unfinished">Акции TSKO LLP</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="116"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="125"/>
         <source>Акции SHOP TRT</source>
         <translation type="unfinished">Акции SHOP TRT</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="143"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="152"/>
         <source>Brent CrudeOil Lots</source>
         <translation type="unfinished">Нефть Brent</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="163"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="172"/>
         <source>Naturel Gas Lots</source>
-        <translation type="unfinished">Природный газ</translation>
+        <translation type="unfinished">Природный газ Henry HUB</translation>
     </message>
     <message>
-        <location filename="../../ui/view/MenuSideBar.qml" line="183"/>
+        <location filename="../../ui/view/MenuSideBar.qml" line="192"/>
         <source>Copper Lots</source>
         <translation type="unfinished">Медь</translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/MenuSideBar.qml" line="212"/>
+        <source>Wheat price</source>
+        <translation type="unfinished">Пшеница</translation>
     </message>
 </context>
 <context>
@@ -156,6 +161,19 @@
         <location filename="../../ui/view/Util.qml" line="14"/>
         <source>text</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Wheat</name>
+    <message>
+        <location filename="../../ui/view/Wheat.qml" line="78"/>
+        <source>Wheat prices</source>
+        <translation type="unfinished">Цены на пшеницу</translation>
+    </message>
+    <message>
+        <location filename="../../ui/view/Wheat.qml" line="434"/>
+        <source>Clear</source>
+        <translation type="unfinished">Очистить</translation>
     </message>
 </context>
 </TS>

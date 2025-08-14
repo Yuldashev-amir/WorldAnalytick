@@ -60,6 +60,9 @@ Window {
     CopperPriceLot {
         visible: root.visibleConnection === "CopperPrices"
     }
+    Wheat {
+        visible: root.visibleConnection === "WheatPrice"
+    }
 
     Button {
         id: burgerMenu
@@ -108,6 +111,10 @@ Window {
                                    visibleConnection = sectionName
                                    console.log(sectionName)
                                }
+        onSectionWheatPrice: sectionName => {
+                                 visibleConnection = sectionName
+                                 console.log(sectionName)
+                             }
     }
     TabBar {
         id: tabBar

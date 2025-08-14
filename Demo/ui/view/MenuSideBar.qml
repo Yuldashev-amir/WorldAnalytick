@@ -7,6 +7,7 @@ import BrentCrudeOil
 import NaturelGas
 import ShopTrt
 import CopperPrices
+import WheatPrice
 
 Page {
     id: rootSd
@@ -17,6 +18,7 @@ Page {
     signal sectionBrentCrudeOil(string sectionName)
     signal sectionNatureGas(string sectionName)
     signal sectionCopperPrices(string sectionName)
+    signal sectionWheatPrice(string sectionName)
     z: 1
     Rectangle {
         id: rectSideBar
@@ -34,6 +36,13 @@ Page {
             source: "file://home/amir/ProjectsQT/WorldAnalytick/demo/Demo/res/img/backgroundGradient.jpg"
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                console.log("Closed new window")
+                rootSd.sectionSelected("new")
+            }
         }
         Column {
             id: sideBar
@@ -195,12 +204,25 @@ Page {
                     CopperPrices.loadingCopperPrices()
                 }
             }
-        }
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                console.log("Closed new window")
-                rootSd.sectionSelected("new")
+
+            Button {
+                id: btnSeven
+                Text {
+                    id: textSevenBtn
+                    text: qsTr("Wheat price")
+                    anchors.centerIn: parent
+                }
+                width: 120
+                height: 40
+                hoverEnabled: true
+                background: Rectangle {
+                    color: btnSeven.hovered ? "lightblue" : "purple"
+                }
+                onClicked: {
+                    console.log("Button Seven clicked")
+                    rootSd.sectionSelected("WheatPrice")
+                    WheatPrice.loadingWheatPrice()
+                }
             }
         }
     }

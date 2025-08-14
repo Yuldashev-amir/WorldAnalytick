@@ -26,7 +26,7 @@ public:
   signals:
   void baseFontSizeChanged();
 
-      void urlOilCrudeDate();
+  void urlOilCrudeDate();
 
   private:
   static Config *mInstance;
