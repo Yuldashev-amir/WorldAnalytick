@@ -4,7 +4,7 @@
 
 Config *Config::mInstance = nullptr;
 
-constexpr char ConfigName[] = "/home/amir/ProjectsQT/WorldAnalytick/demo/Demo/src/demo.ini";
+constexpr char ConfigName[] = "/tmp/demo.ini";
 
 Config::Config(QObject *parent) : QObject(parent) {
   mInstance = this;
